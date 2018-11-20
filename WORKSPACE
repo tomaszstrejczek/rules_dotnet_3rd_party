@@ -1,5 +1,10 @@
 workspace(name = "rules_dotnet_3rd_party")
 
+#local_repository(
+#    name = "io_bazel_rules_dotnet",
+#    path = "/Users/tomek/rules_dotnet",
+#)
+
 git_repository(
     name = "io_bazel_rules_dotnet",
     remote = "https://github.com/bazelbuild/rules_dotnet.git",
