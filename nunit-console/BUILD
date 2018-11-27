@@ -79,6 +79,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
+        "@microsoft.dotnet.internalabstractions//:core",
         "//mono-cecil:cecil",
     ],
     data = glob(["nunit/src/NUnitFramework/framework/Schemas/*.xsd"]),
