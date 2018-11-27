@@ -1,8 +1,6 @@
 ﻿{
   "dependencies": {
     "Microsoft.DotNet.InternalAbstractions": "1.0.0",
-    "Microsoft.TestPlatform.ObjectModel": "15.0.0",
-    "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
     "System.Xml.XmlDocument": "4.3.0",
     "System.Xml.XPath": "4.3.0",
     "System.Xml.XPath.XmlDocument": "4.3.0"

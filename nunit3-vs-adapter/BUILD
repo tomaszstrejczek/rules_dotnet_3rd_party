@@ -1,4 +1,4 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resource", "core_xunit_test")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resource", "core_xunit_test", "core_nunit3_test")
 
 core_library(
     name = "testadapter",
@@ -23,8 +23,8 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.extensions.dependencymodel.dll",
-        "@microsoft.testplatform.objectmodel//:core",
         "//nunit-console:engine.netstandard",
+        "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel",
     ],
     keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
 )
@@ -139,4 +139,32 @@ core_library(
         "//nunit:framework",
     ],
     keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
+)
+
+core_nunit3_test(
+    name = "simple",
+    srcs = glob(["nunit3-vs-adapter/tests/Simple/**/*.cs"]),
+    visibility = ["//visibility:public"],
+    defines = [
+        "NETCOREAPP1_0",
+        "SERIALIZATION",
+        "ASYNC",
+        "PLATFORM_DETECTION",
+        "PARALLEL",
+    ],
+    deps = [
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.security.principal.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.text.regularexpressions.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.linq.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.serialization.formatters.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.extensions.dependencymodel.dll",
+        "//nunit:framework",
+    ],
+    testlauncher = ":testadapter"
 )
