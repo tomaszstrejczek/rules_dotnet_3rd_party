@@ -1,4 +1,4 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resource", "core_xunit_test")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resx", "core_xunit_test")
 
 core_library(
     name = "Microsoft.TestPlatform.PlatformAbstractions",
@@ -20,10 +20,10 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_resource(
+core_resx(
     name = "coreutilities_resource",
     src = "vstest/src/Microsoft.TestPlatform.CoreUtilities/Resources/Resources.resx",
-    identifier="Microsoft.TestPlatform.CoreUtilities.Resources.Resources.resx",
+    identifier="Microsoft.VisualStudio.TestPlatform.CoreUtilities.Resources.Resources.resources",
 )
 
 core_library(
@@ -43,13 +43,13 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_resource(
+core_resx(
     name = "objectmodel_resource1",
     src = "vstest/src/Microsoft.TestPlatform.ObjectModel/Resources/Resources.resx",
-    identifier="Microsoft.TestPlatform.ObjectModel.Resources.Resources.resx",
+    identifier="Microsoft.TestPlatform.ObjectModel.Resources.Resources.resources",
 )
 
-core_resource(
+core_resx(
     name = "objectmodel_resource2",
     src = "vstest/src/Microsoft.TestPlatform.ObjectModel/Resources/CommonResources.resx",
     identifier="Microsoft.TestPlatform.ObjectModel.Resources.CommonResources.resx",
@@ -80,10 +80,10 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_resource(
+core_resx(
     name = "utilities_resource",
     src = "vstest/src/Microsoft.TestPlatform.Utilities/Resources/Resources.resx",
-    identifier="Microsoft.VisualStudio.TestPlatform.Utilities.Resources.Resources.resx",
+    identifier="Microsoft.VisualStudio.TestPlatform.Utilities.Resources.Resources.resources",
 )
 
 core_library(
@@ -102,10 +102,10 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_resource(
+core_resx(
     name = "common_resource",
     src = "vstest/src/Microsoft.TestPlatform.Common/Resources/Resources.resx",
-    identifier="Microsoft.VisualStudio.TestPlatform.Common.Resources.Resources.resx",
+    identifier="Microsoft.VisualStudio.TestPlatform.Common.Resources.Resources.resources",
 )
 
 core_library(
@@ -125,10 +125,10 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_resource(
+core_resx(
     name = "communicationutilities_resource",
     src = "vstest/src/Microsoft.TestPlatform.CommunicationUtilities/Resources/Resources.resx",
-    identifier="Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Resources.resx",
+    identifier="Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Resources.resources",
 )
 
 core_library(
@@ -149,10 +149,10 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_resource(
+core_resx(
     name = "crossplatengine_resource",
     src = "vstest/src/Microsoft.TestPlatform.CrossPlatEngine/Resources/Resources.resx",
-    identifier="Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Resources.resx",
+    identifier="Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Resources.resources",
 )
 
 core_library(
@@ -173,10 +173,10 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_resource(
+core_resx(
     name = "client_resource",
     src = "vstest/src/Microsoft.TestPlatform.Client/Resources/Resources.resx",
-    identifier="Microsoft.VisualStudio.TestPlatform.Client.Resources.resx",
+    identifier="Microsoft.VisualStudio.TestPlatform.Client.Resources.resources",
 )
 
 core_library(
@@ -194,10 +194,10 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_resource(
+core_resx(
     name = "console_resource",
     src = "vstest/src/vstest.console/Resources/Resources.resx",
-    identifier="Microsoft.VisualStudio.TestPlatform.CommandLine.Resources.resx",
+    identifier="vstest.console.Resources.Resources.resources",
 )
 
 core_binary(

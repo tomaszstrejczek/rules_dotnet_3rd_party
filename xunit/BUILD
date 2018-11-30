@@ -13,7 +13,7 @@ filegroup(
 core_resource(
     name = "xunit_core_resource",
     src = "xunit/src/xunit.core/Resources/xunit.core.rd.xml",
-    identifier="Resources\\xunit.core.rd.xml",
+    identifier="Xunit.Resources.xunit.core.rd.xml",
 )
 
 core_library(
@@ -172,25 +172,25 @@ filegroup(
 core_resource(
     name = "HTML_xslt",
     src = "xunit/src/xunit.console/HTML.xslt",
-    identifier="HTML.xslt",
+    identifier="Xunit.ConsoleClient.HTML.xslt",
 )
 
 core_resource(
     name = "NUnitXml_xslt",
     src = "xunit/src/xunit.console/NUnitXml.xslt",
-    identifier="NUnitXml.xslt",
+    identifier="Xunit.ConsoleClient.NUnitXml.xslt",
 )
 
 core_resource(
     name = "xUnit1_xslt",
     src = "xunit/src/xunit.console/xUnit1.xslt",
-    identifier="xUnit1.xslt",
+    identifier="Xunit.ConsoleClient.xUnit1.xslt",
 )
 
 core_resource(
     name = "JUnitXml_xslt",
     src = "xunit/src/xunit.console/JUnitXml.xslt",
-    identifier="JUnitXml.xslt",
+    identifier="Xunit.ConsoleClient.JUnitXml.xslt",
 )
 
 core_library(
