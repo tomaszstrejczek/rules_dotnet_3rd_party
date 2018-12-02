@@ -1,4 +1,4 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resx", "core_xunit_test")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resx", "core_vstest_test")
 
 core_library(
     name = "Microsoft.TestPlatform.PlatformAbstractions",
@@ -7,6 +7,7 @@ core_library(
            glob(["vstest/src/Microsoft.TestPlatform.PlatformAbstractions/common/**/*.cs"]),
     visibility = ["//visibility:public"],
     defines = [
+        "TRACE",
     ],
     deps = [
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
@@ -32,6 +33,7 @@ core_library(
     visibility = ["//visibility:public"],
     defines = [
         "NETSTANDARD1_4",
+        "TRACE",
     ],
     deps = [
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",
@@ -60,6 +62,7 @@ core_library(
     srcs = glob(["vstest/src/Microsoft.TestPlatform.ObjectModel/**/*.cs"], exclude=["**/Friends.cs"]) + [":Friends.cs"],
     visibility = ["//visibility:public"],
     defines = [
+        "TRACE",
     ],
     deps = [
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.serialization.primitives.dll",
@@ -91,6 +94,7 @@ core_library(
     srcs = glob(["vstest/src/Microsoft.TestPlatform.Utilities/**/*.cs"]),
     visibility = ["//visibility:public"],
     defines = [
+        "TRACE",
     ],
     deps = [
         ":Microsoft.TestPlatform.CoreUtilities",
@@ -113,6 +117,7 @@ core_library(
     srcs = glob(["vstest/src/Microsoft.TestPlatform.Common/**/*.cs"], exclude=["**/Friends.cs"]) + [":Common_Friends.cs"],
     visibility = ["//visibility:public"],
     defines = [
+        "TRACE",
     ],
     deps = [
         ":Microsoft.TestPlatform.CoreUtilities",
@@ -136,6 +141,7 @@ core_library(
     srcs = glob(["vstest/src/Microsoft.TestPlatform.CommunicationUtilities/**/*.cs"], exclude=["**/Friends.cs"]) + [":CommunicationUtilities_Friends.cs"],
     visibility = ["//visibility:public"],
     defines = [
+        "TRACE",
     ],
     deps = [
         ":Microsoft.TestPlatform.CoreUtilities",
@@ -160,6 +166,7 @@ core_library(
     srcs = glob(["vstest/src/Microsoft.TestPlatform.CrossPlatEngine/**/*.cs"]),
     visibility = ["//visibility:public"],
     defines = [
+        "TRACE",
     ],
     deps = [
         ":Microsoft.TestPlatform.CoreUtilities",
@@ -176,7 +183,7 @@ core_library(
 core_resx(
     name = "client_resource",
     src = "vstest/src/Microsoft.TestPlatform.Client/Resources/Resources.resx",
-    identifier="Microsoft.VisualStudio.TestPlatform.Client.Resources.resources",
+    identifier="Microsoft.VisualStudio.TestPlatform.Client.Resources.Resources.resources",
 )
 
 core_library(
@@ -184,6 +191,7 @@ core_library(
     srcs = glob(["vstest/src/Microsoft.TestPlatform.Client/**/*.cs"]),
     visibility = ["//visibility:public"],
     defines = [
+        "TRACE",
     ],
     deps = [
         ":Microsoft.TestPlatform.CrossPlatEngine",
@@ -205,9 +213,11 @@ core_binary(
     srcs = glob(["vstest/src/vstest.console/**/*.cs"]),
     visibility = ["//visibility:public"],
     defines = [
+        "TRACE",
     ],
     deps = [
         ":Microsoft.VisualStudio.TestPlatform.Client",
+        ":Microsoft.TestPlatform.Extensions.TrxLogger",
     ],
     resources = [
         ":console_resource",
@@ -215,3 +225,40 @@ core_binary(
     keyfile = ":vstest.snk",
 )
 
+core_resx(
+    name = "trxlogger_resource",
+    src = "vstest/src/Microsoft.TestPlatform.Extensions.TrxLogger/Resources/TrxResource.resx",
+    identifier="Microsoft.VisualStudio.TestPlatform.Extensions.TrxLogger.Resources.TrxResource.resources",
+)
+
+core_library(
+    name = "Microsoft.TestPlatform.Extensions.TrxLogger",
+    srcs = glob(["vstest/src/Microsoft.TestPlatform.Extensions.TrxLogger/**/*.cs"]),
+    visibility = ["//visibility:public"],
+    defines = [
+        "TRACE",
+    ],
+    deps = [
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
+    ],
+    resources = [
+        ":trxlogger_resource",
+    ],
+    keyfile = ":vstest.snk",
+)
+
+core_vstest_test(
+    name = "Microsoft.TestPlatform.CoreUtilities.UnitTests",
+    srcs = glob(["vstest/test/Microsoft.TestPlatform.CoreUtilities.UnitTests/**/*.cs"]),
+    visibility = ["//visibility:public"],
+    defines = [
+        "TRACE",
+    ],
+    deps = [
+        ":Microsoft.TestPlatform.CoreUtilities",
+        "//testfx:MSTest.Core",
+        "//moq4:Moq",
+    ],
+    testlauncher = ":vstest.console",
+    keyfile = ":vstest.snk",
+)
