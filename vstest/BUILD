@@ -218,6 +218,8 @@ core_binary(
     deps = [
         ":Microsoft.VisualStudio.TestPlatform.Client",
         ":Microsoft.TestPlatform.Extensions.TrxLogger",
+        ":Microsoft.TestPlatform.TestHostProvider",
+        ":testhost",
     ],
     resources = [
         ":console_resource",
@@ -260,5 +262,51 @@ core_vstest_test(
         "//moq4:Moq",
     ],
     testlauncher = ":vstest.console",
+    keyfile = ":vstest.snk",
+)
+
+core_resx(
+    name = "testhostprovider_resource",
+    src = "vstest/src/Microsoft.TestPlatform.TestHostProvider/Resources/Resources.resx",
+    identifier="Microsoft.TestPlatform.TestHostProvider.Resources.Resources.resources",
+)
+
+core_library(
+    name = "Microsoft.TestPlatform.TestHostProvider",
+    srcs = glob(["vstest/src/Microsoft.TestPlatform.TestHostProvider/**/*.cs"]),
+    visibility = ["//visibility:public"],
+    defines = [
+        "TRACE",
+    ],
+    deps = [
+        "@microsoft.extensions.dependencymodel//:core",
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
+        "//newtonsoft.json:newtonsoft.json",
+    ],
+    resources = [
+        ":testhostprovider_resource",
+    ],
+    keyfile = ":vstest.snk",
+)
+
+core_binary(
+    name = "testhost",
+    srcs = [":vstest/src/testhost.x86/Program.cs", 
+        ":vstest/src/testhost.x86/DefaultEngineInvoker.cs",
+        ":vstest/src/testhost.x86/IEngineInvoker.cs",
+        ":vstest/src/testhost.x86/AppDomainEngineInvoker.cs",
+        ":vstest/src/testhost.x86/Friends.cs",
+        ":vstest/src/testhost.x86/UnitTestClient.cs",
+        
+    ],
+    visibility = ["//visibility:public"],
+    defines = [
+        "TRACE",
+    ],
+    deps = [
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
+        ":Microsoft.TestPlatform.CommunicationUtilities",
+        ":Microsoft.TestPlatform.CrossPlatEngine",
+    ],
     keyfile = ":vstest.snk",
 )

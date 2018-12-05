@@ -58,6 +58,7 @@ core_library(
         "HAVE_XML_DOCUMENT",
         "HAVE_XML_DOCUMENT_TYPE",
         "HAVE_CONCURRENT_DICTIONARY",
+        "SIGNED",
     ],
     deps = [
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
@@ -74,4 +75,5 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.xdocument.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.data.dll",
     ],
+    keyfile = ":newtonsoft.json.snk",
 )

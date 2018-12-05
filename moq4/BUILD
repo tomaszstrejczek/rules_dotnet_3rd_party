@@ -28,5 +28,6 @@ core_library(
         "//ifluentinterface:IFluentInterface",
         "//castle.core:Castle.Core",
     ],
+    keyfile=":moq4/Moq.snk",
 )
 

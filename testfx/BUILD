@@ -22,6 +22,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.loader.dll",
         ":Extension.Core",
     ],
+    keyfile = ":testfx.snk",
 )
 
 core_library(
@@ -39,5 +40,6 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.loader.dll",
     ],
+    keyfile = ":testfx.snk",
 )
 
