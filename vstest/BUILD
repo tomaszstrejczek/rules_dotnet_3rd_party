@@ -291,6 +291,7 @@ core_library(
 
 core_binary(
     name = "testhost",
+    out = "testhost.dll",
     srcs = [":vstest/src/testhost.x86/Program.cs", 
         ":vstest/src/testhost.x86/DefaultEngineInvoker.cs",
         ":vstest/src/testhost.x86/IEngineInvoker.cs",
