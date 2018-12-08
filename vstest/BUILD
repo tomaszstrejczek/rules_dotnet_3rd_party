@@ -48,13 +48,13 @@ core_library(
 core_resx(
     name = "objectmodel_resource1",
     src = "vstest/src/Microsoft.TestPlatform.ObjectModel/Resources/Resources.resx",
-    identifier="Microsoft.TestPlatform.ObjectModel.Resources.Resources.resources",
+    identifier="Microsoft.VisualStudio.TestPlatform.ObjectModel.Resources.Resources.resources",
 )
 
 core_resx(
     name = "objectmodel_resource2",
     src = "vstest/src/Microsoft.TestPlatform.ObjectModel/Resources/CommonResources.resx",
-    identifier="Microsoft.TestPlatform.ObjectModel.Resources.CommonResources.resx",
+    identifier="Microsoft.VisualStudio.TestPlatform.ObjectModel.Resources.CommonResources.resx",
 )
 
 core_library(
@@ -158,7 +158,7 @@ core_library(
 core_resx(
     name = "crossplatengine_resource",
     src = "vstest/src/Microsoft.TestPlatform.CrossPlatEngine/Resources/Resources.resx",
-    identifier="Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Resources.resources",
+    identifier="Microsoft.VisualStudio.TestPlatform.CrossPlatEngine.Resources.Resources.resources",
 )
 
 core_library(
@@ -220,6 +220,7 @@ core_binary(
         ":Microsoft.TestPlatform.Extensions.TrxLogger",
         ":Microsoft.TestPlatform.TestHostProvider",
         ":testhost",
+        "//testfx:Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter",
     ],
     resources = [
         ":console_resource",
