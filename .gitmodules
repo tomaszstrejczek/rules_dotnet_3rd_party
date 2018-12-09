@@ -1,0 +1,37 @@
+[submodule "ifluentinterface/ifluentinterface"]
+	path = ifluentinterface/ifluentinterface
+	url = https://github.com/kzu/IFluentInterface.git
+	branch = master
+[submodule "mono-cecil/cecil"]
+	path = mono-cecil/cecil
+	url = https://github.com/jbevain/cecil.git
+	branch = master
+[submodule "castle.core/Core"]
+	path = castle.core/Core
+	url = git@github.com:tomaszstrejczek/Core.git
+[submodule "moq4/moq4"]
+	path = moq4/moq4
+	url = https://github.com/moq/moq4.git
+[submodule "newtonsoft.json/Newtonsoft.Json"]
+	path = newtonsoft.json/Newtonsoft.Json
+	url = https://github.com/JamesNK/Newtonsoft.Json.git
+[submodule "testfx/testfx"]
+	path = testfx/testfx
+	url = git@github.com:tomaszstrejczek/testfx.git
+	branch = fix467
+[submodule "vstest/vstest"]
+	path = vstest/vstest
+	url = git@github.com:tomaszstrejczek/vstest.git
+	branch = remove_exec
+[submodule "vstest-junit-logger/vstest-junit-logger"]
+	path = vstest-junit-logger/vstest-junit-logger
+	url = git@github.com:tomaszstrejczek/vstest-junit-logger.git
+[submodule "nunit/nunit"]
+	path = nunit/nunit
+	url = git@github.com:tomaszstrejczek/nunit.git
+[submodule "nunit-console/nunit-console"]
+	path = nunit-console/nunit-console
+	url = git@github.com:tomaszstrejczek/nunit-console.git
+[submodule "nunit3-vs-adapter/nunit3-vs-adapter"]
+	path = nunit3-vs-adapter/nunit3-vs-adapter
+	url = git@github.com:tomaszstrejczek/nunit3-vs-adapter.git

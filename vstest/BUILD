@@ -221,6 +221,7 @@ core_binary(
         ":Microsoft.TestPlatform.TestHostProvider",
         ":testhost",
         "//testfx:Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter",
+        "//vstest-junit-logger:AlexKosau.BuildTools.JUnitLogger",
     ],
     resources = [
         ":console_resource",
