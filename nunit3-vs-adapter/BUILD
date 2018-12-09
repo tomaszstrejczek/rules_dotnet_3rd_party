@@ -23,7 +23,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.extensions.dependencymodel.dll",
-        "//nunit-console:engine.netstandard",
+        "//nunit-console:engine",
         "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel",
     ],
     keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",

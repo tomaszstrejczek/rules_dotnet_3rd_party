@@ -27,6 +27,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.threading.tasks.extensions.dll",
         "//ifluentinterface:IFluentInterface",
         "//castle.core:Castle.Core",
+        "//TypeNameFormatter:TypeNameFormatter",
     ],
     resources = [":core_resource"],
     keyfile=":moq4/Moq.snk",

@@ -1,68 +1,19 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resource", "core_xunit_test")
 
 filegroup(
-  name = "engine_netstandard_common",
+  name = "engine_api_common",
   srcs = [
     ":nunit-console/src/CommonAssemblyInfo.cs",
     ":nunit-console/src/NUnitEngine/EngineVersion.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/Exceptions/NUnitEngineException.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/Exceptions/NUnitEngineUnloadException.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/Extensibility/IFrameworkDriver.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/Extensibility/IResultWriter.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/ILogger.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/IResultService.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/ISettings.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/TestSelectionParserException.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Drivers/NotRunnableFrameworkDriver.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/EnginePackageSettings.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Guard.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/InternalEnginePackageSettings.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/CecilExtensions.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/DirectoryFinder.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/Logging/InternalTrace.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/Logging/InternalTraceWriter.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/Logging/Logger.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/PathUtils.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/ResultHelper.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/SettingsGroup.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Internal/SettingsStore.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/ITestEngineRunner.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/ITestRunnerFactory.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Properties/AssemblyInfo.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Runners/AbstractTestRunner.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Runners/AggregatingTestRunner.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Runners/ITestExecutionTask.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Runners/TestEventDispatcher.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Runners/TestExecutionTask.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Services/ResultService.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Services/ResultWriters/NUnit3XmlResultWriter.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Services/ResultWriters/TestCaseResultWriter.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Services/TestFilterBuilder.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Services/TestFilterService.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Services/TestSelectionParser.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/Services/Tokenizer.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/TestEngineResult.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine/XmlHelper.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/Extensibility/ExtensionAttribute.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/Extensibility/TypeExtensionPointAttribute.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/InternalTraceLevel.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/ITestEngine.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/ITestEventListener.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/ITestFilterBuilder.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/ITestFilterService.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/ITestRunner.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/TestFilter.cs",
-    ":nunit-console/src/NUnitEngine/nunit.engine.api/TestPackage.cs",
   ]
 )
 
-
 core_library(
-    name = "engine.netstandard",
-    srcs = glob(["nunit-console/src/NUnitEngine/nunit.engine.netstandard/**/*.cs"]) + [":engine_netstandard_common"],
+    name = "engine.api",
+    srcs = glob(["nunit-console/src/NUnitEngine/nunit.engine.api/**/*.cs"]) + [":engine_api_common"],
     visibility = ["//visibility:public"],
     defines = [
-        "NETSTANDARD1_3",
+        "NETSTANDARD1_6",
         "SERIALIZATION",
         "ASYNC",
         "PLATFORM_DETECTION",
@@ -79,8 +30,36 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
-        "@microsoft.dotnet.internalabstractions//:core",
+    ],
+    data = glob(["nunit/src/NUnitFramework/framework/Schemas/*.xsd"]),
+    keyfile = ":nunit-console/src/nunit.snk",
+)
+
+filegroup(
+  name = "engine_common",
+  srcs = [
+    ":nunit-console/src/CommonAssemblyInfo.cs",
+    ":nunit-console/src/NUnitEngine/EngineVersion.cs",
+    ":nunit-console/src/NUnitEngine/nunit-agent/AgentExitCodes.cs",
+  ]
+)
+
+core_library(
+    name = "engine",
+    srcs = glob(["nunit-console/src/NUnitEngine/nunit.engine/**/*.cs"]) + [":engine_common"],
+    visibility = ["//visibility:public"],
+    defines = [
+        "NETSTANDARD1_6",
+        "NETSTANDARD",
+        "SERIALIZATION",
+        "ASYNC",
+        "PLATFORM_DETECTION",
+        "PARALLEL",
+    ],
+    deps = [        
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
         "//mono-cecil:cecil",
+	    ":engine.api",
     ],
     data = glob(["nunit/src/NUnitFramework/framework/Schemas/*.xsd"]),
     keyfile = ":nunit-console/src/nunit.snk",

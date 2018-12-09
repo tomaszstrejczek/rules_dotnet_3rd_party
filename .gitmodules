@@ -35,3 +35,6 @@
 [submodule "nunit3-vs-adapter/nunit3-vs-adapter"]
 	path = nunit3-vs-adapter/nunit3-vs-adapter
 	url = git@github.com:tomaszstrejczek/nunit3-vs-adapter.git
+[submodule "TypeNameFormatter/TypeNameFormatter"]
+	path = TypeNameFormatter/TypeNameFormatter
+	url = https://github.com/stakx/TypeNameFormatter.git
