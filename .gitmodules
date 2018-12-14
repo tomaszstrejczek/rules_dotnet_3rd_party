@@ -38,3 +38,6 @@
 [submodule "TypeNameFormatter/TypeNameFormatter"]
 	path = TypeNameFormatter/TypeNameFormatter
 	url = https://github.com/stakx/TypeNameFormatter.git
+[submodule "xunit/xunit"]
+	path = xunit/xunit
+	url = https://github.com/xunit/xunit.git
