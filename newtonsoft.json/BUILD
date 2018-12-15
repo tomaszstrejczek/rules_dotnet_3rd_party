@@ -2,7 +2,7 @@ load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "
 
 core_library(
     name = "newtonsoft.json",
-    srcs = glob(["newtonsoft.json/src/Newtonsoft.Json/**/*.cs"]),
+    srcs = glob(["Newtonsoft.Json/Src/Newtonsoft.Json/**/*.cs"]),
     visibility = ["//visibility:public"],
     defines = [
         "NETSTANDARD2_0",
