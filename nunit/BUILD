@@ -1,8 +1,8 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resource", "core_xunit_test")
 
 core_library(
-    name = "framework",
-    srcs = glob(["nunit/src/NUnitFramework/framework/**/*.cs"]),
+    name = "nunit.framework",
+    srcs = glob(["nunit/src/NUnitFramework/framework/**/*.cs"]) + ["nunit/src/NUnitFramework/FrameworkVersion.cs"],
     visibility = ["//visibility:public"],
     defines = [
         "NETSTANDARD2_0",
@@ -36,7 +36,7 @@ core_library(
         "PLATFORM_DETECTION",
     ],
     deps = [
-        ":framework",
+        ":nunit.framework",
     ],
     data = glob(["nunit/src/NUnitFramework/framework/Schemas/*.xsd"]) + glob(["nunit/src/NUnitFramework/nunitlite/Schemas/*.xsd"]),
     keyfile = ":nunit/src/nunit.snk",
@@ -69,7 +69,7 @@ core_library(
         "PLATFORM_DETECTION",
     ],
     deps = [
-        ":framework",
+        ":nunit.framework",
     ],
     keyfile = ":nunit/src/nunit.snk",
 )
