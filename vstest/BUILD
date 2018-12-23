@@ -1,4 +1,4 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resx", "core_vstest_test")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resx")
 
 core_library(
     name = "Microsoft.TestPlatform.PlatformAbstractions",
@@ -252,21 +252,21 @@ core_library(
     keyfile = ":vstest.snk",
 )
 
-core_vstest_test(
-    name = "Microsoft.TestPlatform.CoreUtilities.UnitTests",
-    srcs = glob(["vstest/test/Microsoft.TestPlatform.CoreUtilities.UnitTests/**/*.cs"]),
-    visibility = ["//visibility:public"],
-    defines = [
-        "TRACE",
-    ],
-    deps = [
-        ":Microsoft.TestPlatform.CoreUtilities",
-        "//testfx:MSTest.Core",
-        "//moq4:Moq",
-    ],
-    testlauncher = ":vstest.console",
-    keyfile = ":vstest.snk",
-)
+# core_vstest_test(
+#     name = "Microsoft.TestPlatform.CoreUtilities.UnitTests",
+#     srcs = glob(["vstest/test/Microsoft.TestPlatform.CoreUtilities.UnitTests/**/*.cs"]),
+#     visibility = ["//visibility:public"],
+#     defines = [
+#         "TRACE",
+#     ],
+#     deps = [
+#         ":Microsoft.TestPlatform.CoreUtilities",
+#         "//testfx:MSTest.Core",
+#         "//moq4:Moq",
+#     ],
+#     testlauncher = ":vstest.console",
+#     keyfile = ":vstest.snk",
+# )
 
 core_resx(
     name = "testhostprovider_resource",
