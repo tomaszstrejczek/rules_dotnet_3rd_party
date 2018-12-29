@@ -1,4 +1,4 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resource")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource")
 
 core_library(
     name = "assert.xunit",
@@ -10,7 +10,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.text.regularexpressions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.objectmodel.dll",
-    ]
+    ],
 )
 
 filegroup(
@@ -22,7 +22,6 @@ filegroup(
     ],
     visibility = ["//visibility:public"],
 )
-
 
 filegroup(
     name = "test_files",

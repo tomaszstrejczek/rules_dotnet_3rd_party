@@ -1,9 +1,8 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_binary", "core_resource", "core_xunit_test")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource", "core_xunit_test")
 
 core_library(
     name = "newtonsoft.json",
     srcs = glob(["Newtonsoft.Json/Src/Newtonsoft.Json/**/*.cs"]),
-    visibility = ["//visibility:public"],
     defines = [
         "NETSTANDARD2_0",
         "HAVE_ADO_NET",
@@ -15,7 +14,7 @@ core_library(
         "HAVE_BINARY_EXCEPTION_SERIALIZATION",
         "HAVE_CHAR_TO_LOWER_WITH_CULTURE",
         "HAVE_CHAR_TO_STRING_WITH_CULTURE",
-        "HAVE_COM_ATTRIBUTES", 
+        "HAVE_COM_ATTRIBUTES",
         "HAVE_COMPONENT_MODEL",
         "HAVE_CONCURRENT_COLLECTIONS",
         "HAVE_COVARIANT_GENERICS",
@@ -60,20 +59,21 @@ core_library(
         "HAVE_CONCURRENT_DICTIONARY",
         "SIGNED",
     ],
+    keyfile = ":newtonsoft.json.snk",
+    visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.data.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.textwritertracelistener.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.tracesource.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.serialization.primitives.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.loader.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dynamic.runtime.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.expressions.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.loader.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.serialization.primitives.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.xdocument.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.data.dll",
     ],
-    keyfile = ":newtonsoft.json.snk",
 )
