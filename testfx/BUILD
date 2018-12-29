@@ -10,7 +10,7 @@ core_library(
     name = "MSTest.Core",
     srcs = glob(["testfx/src/TestFramework/MSTest.Core/**/*.cs"]) 
             + glob(["testfx/src/TestFramework/Extension.Shared/**/*.cs"])
-            + [":Friends.cs"],
+            + ["//testfx:Friends.cs"],
     visibility = ["//visibility:public"],
     defines = [
     ],
@@ -25,7 +25,7 @@ core_library(
         ":Extension.Core",
     ],
     resources = [":core_resource"],
-    keyfile = ":testfx.snk",
+    keyfile = "//testfx:testfx.snk",
 )
 
 core_library(
@@ -43,7 +43,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.loader.dll",
     ],
-    keyfile = ":testfx.snk",
+    keyfile = "//testfx:testfx.snk",
 )
 
 core_library(
@@ -58,7 +58,7 @@ core_library(
         ":Extension.Core",
         "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel",
     ],
-    keyfile = ":testfx.snk",
+    keyfile = "//testfx:testfx.snk",
 )
 
 core_library(
@@ -72,7 +72,7 @@ core_library(
     deps = [
         ":PlatformServices.Interface",
     ],
-    keyfile = ":testfx.snk",
+    keyfile = "//testfx:testfx.snk",
 )
 
 core_resx(
@@ -93,6 +93,6 @@ core_library(
     resources = [
         ":adapter_resource",
     ],
-    keyfile = ":testfx.snk",
+    keyfile = "//testfx:testfx.snk",
 )
 

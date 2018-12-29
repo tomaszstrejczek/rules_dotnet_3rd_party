@@ -282,7 +282,8 @@ core_library(
         "TRACE",
     ],
     deps = [
-        "@microsoft.extensions.dependencymodel//:core",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.dll",
+        "@microsoft.extensions.dependencymodel//:netcoreapp2.0_core",
         ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
         "//newtonsoft.json:newtonsoft.json",
     ],
