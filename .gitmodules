@@ -40,3 +40,6 @@
 [submodule "vstest/vstest"]
 	path = vstest/vstest
 	url = https://github.com/microsoft/vstest.git
+[submodule "nuget.netstandard/nuget"]
+	path = nuget.netstandard/nuget
+	url = https://github.com/aelij/NuGet.Client.git
