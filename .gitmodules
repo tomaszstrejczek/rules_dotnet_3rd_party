@@ -37,3 +37,6 @@
 [submodule "xunit/xunit"]
 	path = xunit/xunit
 	url = https://github.com/xunit/xunit.git
+[submodule "vstest/vstest"]
+	path = vstest/vstest
+	url = https://github.com/microsoft/vstest.git

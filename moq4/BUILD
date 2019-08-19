@@ -7,7 +7,7 @@ core_resx(
 )
 
 core_library(
-    name = "Moq",
+    name = "Moq.dll",
     srcs = glob(["moq4/src/Moq/**/*.cs"]),
     defines = [
         "NETCORE",
@@ -16,9 +16,9 @@ core_library(
     resources = [":core_resource"],
     visibility = ["//visibility:public"],
     deps = [
-        "//TypeNameFormatter",
-        "//castle.core:Castle.Core",
-        "//ifluentinterface:IFluentInterface",
+        "//TypeNameFormatter:TypeNameFormatter.dll",
+        "//castle.core:Castle.Core.dll",
+        "//ifluentinterface:IFluentInterface.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.textwritertracelistener.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.tracesource.dll",

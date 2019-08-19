@@ -1,7 +1,8 @@
+# Source version v16.2.0
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resx")
 
 core_library(
-    name = "Microsoft.TestPlatform.PlatformAbstractions",
+    name = "Microsoft.TestPlatform.PlatformAbstractions.dll",
     srcs = glob(["vstest/src/Microsoft.TestPlatform.PlatformAbstractions/Interfaces/**/*.cs"]) + glob([
         "vstest/src/Microsoft.TestPlatform.PlatformAbstractions/netcore/**/*.cs",
     ]) + glob([
@@ -30,7 +31,7 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.TestPlatform.CoreUtilities",
+    name = "Microsoft.TestPlatform.CoreUtilities.dll",
     srcs = glob(["vstest/src/Microsoft.TestPlatform.CoreUtilities/**/*.cs"]),
     defines = [
         "NETSTANDARD1_4",
@@ -42,7 +43,7 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.PlatformAbstractions",
+        ":Microsoft.TestPlatform.PlatformAbstractions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.console.dll",
     ],
 )
@@ -60,11 +61,11 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.VisualStudio.TestPlatform.ObjectModel",
+    name = "Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     srcs = glob(
         ["vstest/src/Microsoft.TestPlatform.ObjectModel/**/*.cs"],
         exclude = ["**/Friends.cs"],
-    ) + [":Friends.cs"],
+    ) + [":ObjectModel_Friends.cs"],
     defines = [
         "TRACE",
     ],
@@ -75,7 +76,8 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.CoreUtilities",
+        ":Microsoft.TestPlatform.CoreUtilities.dll",
+        ":Microsoft.TestPlatform.PlatformAbstractions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.componentmodel.eventbasedasync.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.componentmodel.typeconverter.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.reflection.metadata.dll",
@@ -95,7 +97,7 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.TestPlatform.Utilities",
+    name = "Microsoft.TestPlatform.Utilities.dll",
     srcs = glob(["vstest/src/Microsoft.TestPlatform.Utilities/**/*.cs"]),
     defines = [
         "TRACE",
@@ -106,8 +108,8 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.CoreUtilities",
-        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
+        ":Microsoft.TestPlatform.CoreUtilities.dll",
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
 )
 
@@ -118,7 +120,7 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.VisualStudio.TestPlatform.Common",
+    name = "Microsoft.VisualStudio.TestPlatform.Common.dll",
     srcs = glob(
         ["vstest/src/Microsoft.TestPlatform.Common/**/*.cs"],
         exclude = ["**/Friends.cs"],
@@ -132,9 +134,9 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.CoreUtilities",
-        ":Microsoft.TestPlatform.Utilities",
-        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
+        ":Microsoft.TestPlatform.CoreUtilities.dll",
+        ":Microsoft.TestPlatform.Utilities.dll",
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
 )
 
@@ -145,7 +147,7 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.TestPlatform.CommunicationUtilities",
+    name = "Microsoft.TestPlatform.CommunicationUtilities.dll",
     srcs = glob(
         ["vstest/src/Microsoft.TestPlatform.CommunicationUtilities/**/*.cs"],
         exclude = ["**/Friends.cs"],
@@ -159,10 +161,10 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.CoreUtilities",
-        ":Microsoft.VisualStudio.TestPlatform.Common",
-        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
-        "//newtonsoft.json",
+        ":Microsoft.TestPlatform.CoreUtilities.dll",
+        ":Microsoft.VisualStudio.TestPlatform.Common.dll",
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
+        "//newtonsoft.json:newtonsoft.json.dll",
     ],
 )
 
@@ -173,7 +175,7 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.TestPlatform.CrossPlatEngine",
+    name = "Microsoft.TestPlatform.CrossPlatEngine.dll",
     srcs = glob(["vstest/src/Microsoft.TestPlatform.CrossPlatEngine/**/*.cs"]),
     defines = [
         "TRACE",
@@ -184,10 +186,10 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.CommunicationUtilities",
-        ":Microsoft.TestPlatform.CoreUtilities",
-        ":Microsoft.VisualStudio.TestPlatform.Common",
-        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
+        ":Microsoft.TestPlatform.CommunicationUtilities.dll",
+        ":Microsoft.TestPlatform.CoreUtilities.dll",
+        ":Microsoft.VisualStudio.TestPlatform.Common.dll",
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
 )
 
@@ -198,7 +200,7 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.VisualStudio.TestPlatform.Client",
+    name = "Microsoft.VisualStudio.TestPlatform.Client.dll",
     srcs = glob(["vstest/src/Microsoft.TestPlatform.Client/**/*.cs"]),
     defines = [
         "TRACE",
@@ -209,7 +211,7 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.CrossPlatEngine",
+        ":Microsoft.TestPlatform.CrossPlatEngine.dll",
     ],
 )
 
@@ -220,7 +222,7 @@ core_resx(
 )
 
 core_binary(
-    name = "vstest.console",
+    name = "vstest.console.exe",
     srcs = glob(["vstest/src/vstest.console/**/*.cs"]),
     defines = [
         "TRACE",
@@ -231,13 +233,13 @@ core_binary(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.Extensions.TrxLogger",
-        ":Microsoft.TestPlatform.TestHostProvider",
-        ":Microsoft.VisualStudio.TestPlatform.Client",
-        ":testhost",
-        "//nunit3-vs-adapter:NUnitTestAdapter.TestAdapter",
-        "//testfx:Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter",
-        "//vstest-junit-logger:AlexKosau.BuildTools.JUnitLogger",
+        ":Microsoft.TestPlatform.Extensions.TrxLogger.dll",
+        ":Microsoft.TestPlatform.TestHostProvider.dll",
+        ":Microsoft.VisualStudio.TestPlatform.Client.dll",
+        ":testhost.dll",
+        "//nunit3-vs-adapter:NUnitTestAdapter.TestAdapter.dll",
+        "//testfx:Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll",
+        "//vstest-junit-logger:AlexKosau.BuildTools.JUnitLogger.dll",
     ],
 )
 
@@ -248,7 +250,7 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.TestPlatform.Extensions.TrxLogger",
+    name = "Microsoft.TestPlatform.Extensions.TrxLogger.dll",
     srcs = glob(["vstest/src/Microsoft.TestPlatform.Extensions.TrxLogger/**/*.cs"]),
     defines = [
         "TRACE",
@@ -259,7 +261,7 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
 )
 
@@ -286,7 +288,7 @@ core_resx(
 )
 
 core_library(
-    name = "Microsoft.TestPlatform.TestHostProvider",
+    name = "Microsoft.TestPlatform.TestHostProvider.dll",
     srcs = glob(["vstest/src/Microsoft.TestPlatform.TestHostProvider/**/*.cs"]),
     defines = [
         "TRACE",
@@ -297,15 +299,15 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
-        "//newtonsoft.json",
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
+        "//newtonsoft.json:newtonsoft.json.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.dll",
         "@microsoft.extensions.dependencymodel//:netcoreapp2.0_core",
     ],
 )
 
 core_binary(
-    name = "testhost",
+    name = "testhost.dll",
     srcs = [
         ":vstest/src/testhost.x86/AppDomainEngineInvoker.cs",
         ":vstest/src/testhost.x86/DefaultEngineInvoker.cs",
@@ -314,15 +316,14 @@ core_binary(
         ":vstest/src/testhost.x86/Program.cs",
         ":vstest/src/testhost.x86/UnitTestClient.cs",
     ],
-    out = "testhost.dll",
     defines = [
         "TRACE",
     ],
     keyfile = ":vstest.snk",
     visibility = ["//visibility:public"],
     deps = [
-        ":Microsoft.TestPlatform.CommunicationUtilities",
-        ":Microsoft.TestPlatform.CrossPlatEngine",
-        ":Microsoft.VisualStudio.TestPlatform.ObjectModel",
+        ":Microsoft.TestPlatform.CommunicationUtilities.dll",
+        ":Microsoft.TestPlatform.CrossPlatEngine.dll",
+        ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
 )

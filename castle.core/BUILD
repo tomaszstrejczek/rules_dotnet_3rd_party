@@ -7,7 +7,7 @@ core_resource(
 )
 
 core_library(
-    name = "Castle.Core",
+    name = "Castle.Core.dll",
     srcs = glob(["Core/src/Castle.Core/**/*.cs"]),
     defines = [
     ],

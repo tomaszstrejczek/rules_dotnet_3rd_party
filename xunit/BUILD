@@ -17,7 +17,7 @@ core_resource(
 )
 
 core_library(
-    name = "xunit.core",
+    name = "xunit.core.dll",
     srcs = [":core_common"] + glob(["xunit/src/xunit.core/**/*.cs"]),
     data = [
         ":xunit/src/xunit.core/xunit.core.dll.tdnet",
@@ -32,7 +32,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-        "@xunit_abstractions//:abstractions.xunit",
+        "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
 
@@ -58,7 +58,7 @@ filegroup(
 )
 
 core_library(
-    name = "xunit.execution",
+    name = "xunit.execution.dll",
     srcs = [":execution_common"] + glob(["xunit/src/xunit.execution/**/*.cs"]),
     defines = [
         "XUNIT_FRAMEWORK",
@@ -66,7 +66,7 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":xunit.core",
+        ":xunit.core.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.collections.concurrent.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.filesystem.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
@@ -105,7 +105,7 @@ filegroup(
 )
 
 core_library(
-    name = "xunit.runner.utility",
+    name = "xunit.runner.utility.dll",
     srcs = [":runner_utility_common"] + glob(["xunit/src/xunit.runner.utility/**/*.cs"]),
     defines = [
         "NETSTANDARD2_0",
@@ -124,7 +124,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.text.regularexpressions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.threading.thread.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.xdocument.dll",
-        "@xunit_abstractions//:abstractions.xunit",
+        "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
 
@@ -137,7 +137,7 @@ filegroup(
 )
 
 core_library(
-    name = "xunit.runner.reporters",
+    name = "xunit.runner.reporters.dll",
     srcs = [":runner_reporters_common"] + glob(["xunit/src/xunit.runner.reporters/**/*.cs"]),
     defines = [
         "NETSTANDARD2_0",
@@ -145,7 +145,7 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        ":xunit.runner.utility",
+        ":xunit.runner.utility.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.collections.concurrent.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.filesystem.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
@@ -153,7 +153,7 @@ core_library(
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.threading.thread.dll",
-        "@xunit_abstractions//:abstractions.xunit",
+        "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
 
@@ -193,7 +193,7 @@ core_resource(
 )
 
 core_library(
-    name = "xunit.console",
+    name = "xunit.console.dll",
     srcs = [":console_common"] + glob(["xunit/src/xunit.console/**/*.cs"]),
     defines = [
         "NETSTANDARD2_0",
@@ -210,7 +210,7 @@ core_library(
     unsafe = True,
     visibility = ["//visibility:public"],
     deps = [
-        ":xunit.runner.reporters",
+        ":xunit.runner.reporters.dll",
     ],
 )
 

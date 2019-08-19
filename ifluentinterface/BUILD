@@ -1,7 +1,7 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resx")
 
 core_library(
-    name = "IFluentInterface",
+    name = "IFluentInterface.dll",
     srcs = glob(["*.cs"]),
     defines = [
     ],

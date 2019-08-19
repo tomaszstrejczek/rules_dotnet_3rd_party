@@ -1,7 +1,7 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource")
 
 core_library(
-    name = "abstractions.xunit",
+    name = "abstractions.xunit.dll",
     srcs = glob(["**/*.cs"]),
     visibility = ["//visibility:public"],
     deps = [

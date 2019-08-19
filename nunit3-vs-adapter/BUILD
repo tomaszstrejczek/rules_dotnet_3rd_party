@@ -1,7 +1,7 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource", "core_xunit_test")
 
 core_library(
-    name = "NUnitTestAdapter.TestAdapter",
+    name = "NUnitTestAdapter.TestAdapter.dll",
     srcs = glob(["nunit3-vs-adapter/src/NUnitTestAdapter/**/*.cs"]),
     defines = [
         "NETCOREAPP1_0",
@@ -13,8 +13,8 @@ core_library(
     keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "//nunit-console:engine",
-        "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel",
+        "//nunit-console:engine.dll",
+        "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.extensions.dependencymodel.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
@@ -30,7 +30,7 @@ core_library(
 )
 
 core_library(
-    name = "empty-assembly",
+    name = "empty-assembly.dll",
     srcs = glob(["nunit3-vs-adapter/src/empty-assembly/**/*.cs"]),
     defines = [
         "NETCOREAPP1_0",
@@ -42,7 +42,7 @@ core_library(
     keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "//nunit:nunit.framework",
+        "//nunit:nunit.framework.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.extensions.dependencymodel.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
@@ -58,7 +58,7 @@ core_library(
 )
 
 core_library(
-    name = "mock-assembly",
+    name = "mock-assembly.dll",
     srcs = glob(["nunit3-vs-adapter/src/mock-assembly/**/*.cs"]),
     defines = [
         "NETCOREAPP1_0",
@@ -70,7 +70,7 @@ core_library(
     keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "//nunit:nunit.framework",
+        "//nunit:nunit.framework.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.extensions.dependencymodel.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
@@ -86,7 +86,7 @@ core_library(
 )
 
 core_library(
-    name = "adapterexternaltests",
+    name = "adapterexternaltests.dll",
     srcs = glob(["nunit3-vs-adapter/src/NUnit3AdapterExternalTests/**/*.cs"]),
     defines = [
         "NETCOREAPP1_0",
@@ -98,7 +98,7 @@ core_library(
     keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "//nunit:nunit.framework",
+        "//nunit:nunit.framework.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.extensions.dependencymodel.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",

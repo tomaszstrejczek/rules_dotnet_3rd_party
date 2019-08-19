@@ -1,7 +1,7 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource", "core_xunit_test")
 
 core_library(
-    name = "TypeNameFormatter",
+    name = "TypeNameFormatter.dll",
     srcs = glob(["TypeNameFormatter/src/TypeNameFormatter/**/*.cs"]),
     defines = [
     ],

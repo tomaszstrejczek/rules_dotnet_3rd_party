@@ -20,7 +20,7 @@ filegroup(
 )
 
 core_library(
-    name = "cecil",
+    name = "cecil.dll",
     srcs = [":cecil_common"],
     defines = [
     ],

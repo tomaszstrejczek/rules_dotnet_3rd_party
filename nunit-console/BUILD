@@ -9,7 +9,7 @@ filegroup(
 )
 
 core_library(
-    name = "engine.api",
+    name = "engine.api.dll",
     srcs = glob(["nunit-console/src/NUnitEngine/nunit.engine.api/**/*.cs"]) + [":engine_api_common"],
     data = glob(["nunit/src/NUnitFramework/framework/Schemas/*.xsd"]),
     defines = [
@@ -45,7 +45,7 @@ filegroup(
 )
 
 core_library(
-    name = "engine",
+    name = "engine.dll",
     srcs = glob(["nunit-console/src/NUnitEngine/nunit.engine/**/*.cs"]) + [":engine_common"],
     data = glob(["nunit/src/NUnitFramework/framework/Schemas/*.xsd"]),
     defines = [
@@ -59,8 +59,8 @@ core_library(
     keyfile = ":nunit-console/src/nunit.snk",
     visibility = ["//visibility:public"],
     deps = [
-        ":engine.api",
-        "//mono-cecil:cecil",
+        ":engine.api.dll",
+        "//mono-cecil:cecil.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.dotnet.platformabstractions.dll",
     ],
 )

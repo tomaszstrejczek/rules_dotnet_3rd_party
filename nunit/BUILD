@@ -1,7 +1,7 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource", "core_xunit_test")
 
 core_library(
-    name = "nunit.framework",
+    name = "nunit.framework.dll",
     srcs = glob(["nunit/src/NUnitFramework/framework/**/*.cs"]) + ["nunit/src/NUnitFramework/FrameworkVersion.cs"],
     data = glob(["nunit/src/NUnitFramework/framework/Schemas/*.xsd"]),
     defines = [
@@ -26,7 +26,7 @@ core_library(
 )
 
 core_library(
-    name = "nunitlite",
+    name = "nunitlite.dll",
     srcs = glob(["nunit/src/NUnitFramework/nunitlite/**/*.cs"]),
     data = glob(["nunit/src/NUnitFramework/framework/Schemas/*.xsd"]) + glob(["nunit/src/NUnitFramework/nunitlite/Schemas/*.xsd"]),
     defines = [
@@ -38,12 +38,12 @@ core_library(
     keyfile = ":nunit/src/nunit.snk",
     visibility = ["//visibility:public"],
     deps = [
-        ":nunit.framework",
+        ":nunit.framework.dll",
     ],
 )
 
 core_library(
-    name = "mock-assembly",
+    name = "mock-assembly.dll",
     srcs = glob(["nunit/src/NUnitFramework/mock-assembly/**/*.cs"]),
     defines = [
         "NETSTANDARD2_0",
@@ -54,12 +54,12 @@ core_library(
     keyfile = ":nunit/src/nunit.snk",
     visibility = ["//visibility:public"],
     deps = [
-        ":nunitlite",
+        ":nunitlite.dll",
     ],
 )
 
 core_library(
-    name = "testdata",
+    name = "testdata.dll",
     srcs = glob(["nunit/src/NUnitFramework/testdata/**/*.cs"]),
     defines = [
         "NETSTANDARD2_0",
@@ -70,6 +70,6 @@ core_library(
     keyfile = ":nunit/src/nunit.snk",
     visibility = ["//visibility:public"],
     deps = [
-        ":nunit.framework",
+        ":nunit.framework.dll",
     ],
 )
