@@ -4,8 +4,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 local_repository(
     name = "io_bazel_rules_dotnet",
-    #    path = "/Users/tomek/rules_dotnet",
-    path = "/home/nest-user/work/gopath/rules_dotnet",
+    #path = "/home/nest-user/work/gopath/rules_dotnet",
+    path = "c:/rules_dotnet",
 )
 
 #git_repository(
