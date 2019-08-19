@@ -19,10 +19,6 @@
 	path = testfx/testfx
 	url = git@github.com:tomaszstrejczek/testfx.git
 	branch = fix467
-[submodule "vstest/vstest"]
-	path = vstest/vstest
-	url = git@github.com:tomaszstrejczek/vstest.git
-	branch = remove_exec
 [submodule "vstest-junit-logger/vstest-junit-logger"]
 	path = vstest-junit-logger/vstest-junit-logger
 	url = git@github.com:tomaszstrejczek/vstest-junit-logger.git
