@@ -295,12 +295,15 @@ core_library(
         "nuget/src/NuGet.Core/NuGet.Commands/**/*.cs",
     ]) + glob(
         [
-            "nuget/submodules/FileSystem/src/Microsoft.Extensions.FileSystemGlobbing/**/*.cs",
-            "nuget/submodules/FileSystem/src/Microsoft.AspNet.FileProviders.Abstractions/**/*.cs",
-            "nuget/submodules/FileSystem/src/Microsoft.AspNet.FileProviders.Sources/**/*.cs",
-            "nuget/submodules/Common/src/Microsoft.Extensions.Primitives/IChangeToken.cs",
+            "FileSystem/src/Microsoft.Extensions.FileSystemGlobbing/**/*.cs",
+            "FileSystem/src/Microsoft.AspNet.FileProviders.Abstractions/**/*.cs",
+            "FileSystem/src/Microsoft.AspNet.FileProviders.Sources/**/*.cs",
+            "Common/src/Microsoft.Extensions.Primitives/IChangeToken.cs",
         ],
-        exclude = ["nuget/submodules/**/AssemblyInfo.cs"],
+        exclude = [
+            "FileSystem/**/AssemblyInfo.cs",
+            "Common/**/AssemblyInfo.cs",
+        ],
     ),
     defines = [
         "IS_CORECLR",

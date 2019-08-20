@@ -43,3 +43,9 @@
 [submodule "nuget.netstandard/nuget"]
 	path = nuget.netstandard/nuget
 	url = https://github.com/aelij/NuGet.Client.git
+[submodule "nuget.netstandard/Common"]
+	path = nuget.netstandard/Common
+	url = https://github.com/aspnet/Common.git
+[submodule "nuget.netstandard/FileSystem"]
+	path = nuget.netstandard/FileSystem
+	url = https://github.com/NuGet/FileSystem.git
