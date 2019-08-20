@@ -335,6 +335,9 @@ core_library(
     deps = [
         ":NuGet.Commands.dll",
         ":NuGet.Resolver.dll",
-        #        "@io_bazel_rules_dotnet//dotnet/stdlib.net:system.componentmodel.composition.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.csharp.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
+        "@microsoft.web.xdt//:netcoreapp2.1_core",
+        "@system.componentmodel.composition//:netcoreapp2.1_core",
     ],
 )
