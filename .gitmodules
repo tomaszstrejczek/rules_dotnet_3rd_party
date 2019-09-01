@@ -6,9 +6,6 @@
 	path = mono-cecil/cecil
 	url = https://github.com/jbevain/cecil.git
 	branch = master
-[submodule "castle.core/Core"]
-	path = castle.core/Core
-	url = git@github.com:tomaszstrejczek/Core.git
 [submodule "moq4/moq4"]
 	path = moq4/moq4
 	url = https://github.com/moq/moq4.git
