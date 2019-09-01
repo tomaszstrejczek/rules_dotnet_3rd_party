@@ -158,139 +158,139 @@ def rules_dotnet_3rd_party_dependencies():
         version = "1.1.9",
     )
 
-    nuget_package(
-        name = "newtonsoft.json",
-        core_files = {
-            "netcoreapp2.0": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netcoreapp2.1": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-        },
-        core_lib = {
-            "netcoreapp2.0": "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "netcoreapp2.1": "lib/netstandard1.0/Newtonsoft.Json.dll",
-        },
-        mono_files = [
-            "lib/net45/Newtonsoft.Json.dll",
-            "lib/net45/Newtonsoft.Json.xml",
-            "tools/install.ps1",
-        ],
-        mono_lib = "lib/net45/Newtonsoft.Json.dll",
-        net_files = {
-            "net45": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "net451": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "net452": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "net46": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "net461": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "net462": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "net47": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "net471": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "net472": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netstandard1.0": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netstandard1.1": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netstandard1.2": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netstandard1.3": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netstandard1.4": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netstandard1.5": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netstandard1.6": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-            "netstandard2.0": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
-            ],
-        },
-        net_lib = {
-            "net45": "lib/net45/Newtonsoft.Json.dll",
-            "net451": "lib/net45/Newtonsoft.Json.dll",
-            "net452": "lib/net45/Newtonsoft.Json.dll",
-            "net46": "lib/net45/Newtonsoft.Json.dll",
-            "net461": "lib/net45/Newtonsoft.Json.dll",
-            "net462": "lib/net45/Newtonsoft.Json.dll",
-            "net47": "lib/net45/Newtonsoft.Json.dll",
-            "net471": "lib/net45/Newtonsoft.Json.dll",
-            "net472": "lib/net45/Newtonsoft.Json.dll",
-            "netstandard1.0": "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "netstandard1.1": "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "netstandard1.2": "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "netstandard1.3": "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "netstandard1.4": "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "netstandard1.5": "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "netstandard1.6": "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "netstandard2.0": "lib/netstandard1.0/Newtonsoft.Json.dll",
-        },
-        package = "newtonsoft.json",
-        version = "9.0.1",
-    )
+    # nuget_package(
+    #     name = "newtonsoft.json",
+    #     core_files = {
+    #         "netcoreapp2.0": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netcoreapp2.1": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #     },
+    #     core_lib = {
+    #         "netcoreapp2.0": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #         "netcoreapp2.1": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #     },
+    #     mono_files = [
+    #         "lib/net45/Newtonsoft.Json.dll",
+    #         "lib/net45/Newtonsoft.Json.xml",
+    #         "tools/install.ps1",
+    #     ],
+    #     mono_lib = "lib/net45/Newtonsoft.Json.dll",
+    #     net_files = {
+    #         "net45": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "net451": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "net452": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "net46": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "net461": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "net462": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "net47": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "net471": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "net472": [
+    #             "lib/net45/Newtonsoft.Json.dll",
+    #             "lib/net45/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netstandard1.0": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netstandard1.1": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netstandard1.2": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netstandard1.3": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netstandard1.4": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netstandard1.5": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netstandard1.6": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #         "netstandard2.0": [
+    #             "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #             "lib/netstandard1.0/Newtonsoft.Json.xml",
+    #             "tools/install.ps1",
+    #         ],
+    #     },
+    #     net_lib = {
+    #         "net45": "lib/net45/Newtonsoft.Json.dll",
+    #         "net451": "lib/net45/Newtonsoft.Json.dll",
+    #         "net452": "lib/net45/Newtonsoft.Json.dll",
+    #         "net46": "lib/net45/Newtonsoft.Json.dll",
+    #         "net461": "lib/net45/Newtonsoft.Json.dll",
+    #         "net462": "lib/net45/Newtonsoft.Json.dll",
+    #         "net47": "lib/net45/Newtonsoft.Json.dll",
+    #         "net471": "lib/net45/Newtonsoft.Json.dll",
+    #         "net472": "lib/net45/Newtonsoft.Json.dll",
+    #         "netstandard1.0": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #         "netstandard1.1": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #         "netstandard1.2": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #         "netstandard1.3": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #         "netstandard1.4": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #         "netstandard1.5": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #         "netstandard1.6": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #         "netstandard2.0": "lib/netstandard1.0/Newtonsoft.Json.dll",
+    #     },
+    #     package = "newtonsoft.json",
+    #     version = "9.0.1",
+    # )
 
     nuget_package(
         name = "microsoft.extensions.dependencymodel",

@@ -2,7 +2,7 @@ load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "
 
 filegroup(
     name = "shared",
-    srcs = glob(["nuget/build/Shared/**/*.cs"]),
+    srcs = glob(["nuget/build/Shared/**/*.cs"]) + [":AssemblyInfo.cs"],
 )
 
 core_resx(
@@ -181,7 +181,9 @@ core_library(
         ":NuGet.Common.dll",
         ":NuGet.Configuration.dll",
         ":NuGet.Packaging.Core.dll",
-        "//newtonsoft.json:newtonsoft.json.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dynamic.runtime.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.dll",
+        "@newtonsoft.json//:netcoreapp2.1_core",
     ],
 )
 
