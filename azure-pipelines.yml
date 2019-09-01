@@ -11,7 +11,6 @@ jobs:
       displayName: 'Show env'
     - script: |
         bazel build -s //... 
-        bazel shutdown 
       displayName: 'Build all'
 
 - job: macOS
@@ -35,7 +34,6 @@ jobs:
       displayName: 'Show mono version'
     - script: |
         bazel --host_jvm_args=-Xmx500m --host_jvm_args=-Xms500m build -s --local_resources=400,1,1.0 --spawn_strategy=standalone //... 
-        bazel shutdown 
       displayName: 'Build all'
 
 - job: linux
@@ -57,6 +55,5 @@ jobs:
       displayName: 'Clean all'
     - script: |
         bazel --host_jvm_args=-Xmx500m --host_jvm_args=-Xms500m build -s --local_resources=400,1,1.0 --spawn_strategy=standalone //... 
-        bazel shutdown 
       displayName: 'Build all'
         
