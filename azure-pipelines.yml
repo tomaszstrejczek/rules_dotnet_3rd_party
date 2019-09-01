@@ -10,6 +10,15 @@ jobs:
         choco --version
         del c:\users\tomek\_bazel_tomek\jfwpcar4\server\server_info.rawproto
       displayName: 'Show env'
+
+    - task: Bash@3
+      inputs:
+        targetType: 'inline' # Optional. Options: filePath, inline
+        script: |
+          echo $BUILDNUMBER 
+      env:
+        BUILDNUMBER: $(rules_buildcommit)
+
     - script: |
         bazel build -s //... 
       displayName: 'Build all'
