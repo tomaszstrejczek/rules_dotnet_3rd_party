@@ -1,0 +1,62 @@
+
+jobs:
+- job: Windows
+  pool:
+    name: 'home'
+  steps:
+    - script: |
+        bazel version
+        dotnet --info
+        choco --version
+      displayName: 'Show env'
+    - script: |
+        bazel build -s //... 
+        bazel shutdown 
+      displayName: 'Build all'
+
+- job: macOS
+  pool:
+      vmImage: macOS-10.13
+  steps:
+    - script: |
+        brew install bazel coreutils
+      displayName: 'Install dependencies'
+    - script: |
+        bazel version
+      displayName: 'Show bazel version'
+    - script: |
+        dotnet --info
+      displayName: 'Show dotnet version'
+    - script: |
+        brew cask install mono-mdk
+      displayName: 'Install mono'
+    - script: |
+        mono --version
+      displayName: 'Show mono version'
+    - script: |
+        bazel --host_jvm_args=-Xmx500m --host_jvm_args=-Xms500m build -s --local_resources=400,1,1.0 --spawn_strategy=standalone //... 
+        bazel shutdown 
+      displayName: 'Build all'
+
+- job: linux
+  pool:
+      vmImage: ubuntu-16.04
+  steps:
+    - script: |
+        echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+        curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+        sudo apt-get update && sudo apt-get install -y bazel
+      displayName: 'Install dependencies'
+    - script: |
+        bazel version
+        dotnet --info
+        mono --version
+      displayName: 'Show env'
+    - script: |
+        bazel clean --expunge
+      displayName: 'Clean all'
+    - script: |
+        bazel --host_jvm_args=-Xmx500m --host_jvm_args=-Xms500m build -s --local_resources=400,1,1.0 --spawn_strategy=standalone //... 
+        bazel shutdown 
+      displayName: 'Build all'
+        

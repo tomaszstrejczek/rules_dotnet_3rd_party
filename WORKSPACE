@@ -2,19 +2,19 @@ workspace(name = "rules_dotnet_3rd_party")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-local_repository(
-    name = "io_bazel_rules_dotnet",
-    #path = "/home/nest-user/work/gopath/rules_dotnet",
-    path = "c:/rules_dotnet",
-)
+# local_repository(
+#     name = "io_bazel_rules_dotnet",
+#     #path = "/home/nest-user/work/gopath/rules_dotnet",
+#     path = "c:/rules_dotnet",
+# )
 
 load("//:repositories.bzl", "rules_dotnet_3rd_party_dependencies")
 
-#git_repository(
-#    name = "io_bazel_rules_dotnet",
-#    remote = "https://github.com/bazelbuild/rules_dotnet.git",
-#    commit = "229f507dc2fb1b1ed685a6cfe03ade24a9797fa3",
-#)
+git_repository(
+    name = "io_bazel_rules_dotnet",
+    commit = "e1bce290ca52f707cfa10498c85729baf01002b1",
+    remote = "https://github.com/tomaszstrejczek/rules_dotnet.git",
+)
 
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_register_sdk", "dotnet_register_toolchains", "dotnet_repositories", "nuget_package")
 
