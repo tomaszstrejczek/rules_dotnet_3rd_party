@@ -45,5 +45,5 @@ jobs:
       displayName: 'Show bazel version'
 
     - script: |
-        bazel $(bazel_startup) build -s --spawn_strategy=standalone //all.build 
+        bazel $(bazel_startup) build -s --spawn_strategy=standalone //:all.build 
       displayName: 'Build all'
