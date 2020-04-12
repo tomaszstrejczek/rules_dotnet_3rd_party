@@ -1,4 +1,6 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource", "core_resx")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_resx", "core_stdlib")
+
+core_stdlib(name = "system.security.cryptography.protecteddata.dll")
 
 filegroup(
     name = "shared",
@@ -21,17 +23,7 @@ core_library(
     resources = [":nuget_frameworks_resource"],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.process.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.textwritertracelistener.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.diagnostics.tracesource.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.queryable.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.reflection.emit.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.reflection.typeextensions.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.loader.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.threading.tasks.extensions.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 
@@ -52,7 +44,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":NuGet.Frameworks.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.compression.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 
@@ -74,8 +66,8 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":NuGet.Common.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.security.cryptography.protecteddata.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.xdocument.dll",
+        ":system.security.cryptography.protecteddata.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 
@@ -95,8 +87,7 @@ core_library(
     resources = [":nuget_versioning_resource"],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 
@@ -109,8 +100,7 @@ core_library(
     keyfile = ":nuget.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 
@@ -133,7 +123,7 @@ core_library(
         ":NuGet.Common.dll",
         ":NuGet.Frameworks.dll",
         ":NuGet.Versioning.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.xdocument.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 
@@ -181,8 +171,7 @@ core_library(
         ":NuGet.Common.dll",
         ":NuGet.Configuration.dll",
         ":NuGet.Packaging.Core.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.dynamic.runtime.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
         "@newtonsoft.json//:netcoreapp2.1_core",
     ],
 )
@@ -318,7 +307,7 @@ core_library(
         ":NuGet.DependencyResolver.Core.dll",
         ":NuGet.Frameworks.dll",
         ":NuGet.ProjectModel.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 
@@ -340,8 +329,7 @@ core_library(
     deps = [
         ":NuGet.Commands.dll",
         ":NuGet.Resolver.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:microsoft.csharp.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:netstandard.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
         "@microsoft.web.xdt//:netcoreapp2.1_core",
         "@system.componentmodel.composition//:netcoreapp2.1_core",
     ],

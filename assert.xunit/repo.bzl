@@ -1,15 +1,11 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library")
 
 core_library(
     name = "assert.xunit.dll",
     srcs = glob(["**/*.cs"]),
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.text.regularexpressions.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.objectmodel.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 

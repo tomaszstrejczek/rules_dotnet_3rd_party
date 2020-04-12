@@ -5,42 +5,44 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
     name = "io_bazel_rules_dotnet",
-    commit = "e1bce290ca52f707cfa10498c85729baf01002b1",
+    branch = "3rd_party",
     remote = "https://github.com/tomaszstrejczek/rules_dotnet.git",
 )
 
-# local_repository(
-#     name = "io_bazel_rules_dotnet",
-#     #path = "/home/nest-user/work/gopath/rules_dotnet",
-#     path = "c:/rules_dotnet",
-# )
+#local_repository(
+#    name = "io_bazel_rules_dotnet",
+#    #path = "/home/nest-user/work/gopath/rules_dotnet",
+#    path = "c:/rules_dotnet",
+#)
 
-load("//:repositories.bzl", "rules_dotnet_3rd_party_dependencies")
-
-
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_register_sdk", "dotnet_register_toolchains", "dotnet_repositories", "nuget_package")
-
-rules_dotnet_3rd_party_dependencies()
+load("@io_bazel_rules_dotnet//dotnet:deps.bzl", "dotnet_repositories")
 
 dotnet_repositories()
 
+load("@rules_dotnet_3rd_party//:repositories.bzl", "rules_dotnet_3rd_party_dependencies")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_register_sdk", "dotnet_register_toolchains", "dotnet_repositories_nugets")
+
 dotnet_register_toolchains()
 
+dotnet_repositories_nugets()
+
+rules_dotnet_3rd_party_dependencies()
+
 core_register_sdk(
-    "v2.1.502",
+    "v3.1.100",
     name = "core_sdk",
 )
 
 http_archive(
     name = "xunit_abstractions",
-    build_file = "//:abstractions.xunit/repo.bzl",
+    build_file = "@rules_dotnet_3rd_party//:abstractions.xunit/repo.bzl",
     sha256 = "302dfe0b87993528b2e0c227b4aca4bec82ed136163d7b4b3f75f24f9d43f6fa",
     urls = ["https://github.com/xunit/abstractions.xunit/archive/2.0.1.tar.gz"],
 )
 
 http_archive(
     name = "xunit_assert",
-    build_file = "//:assert.xunit/repo.bzl",
+    build_file = "@rules_dotnet_3rd_party//:assert.xunit/repo.bzl",
     sha256 = "82e662c9a30b9468640d4e1b0db3fca58c22d5ac6f9b7ab8cc16ba1e35515d1c",
     strip_prefix = "assert.xunit-2.4.1",
     urls = ["https://github.com/xunit/assert.xunit/archive/2.4.1.tar.gz"],

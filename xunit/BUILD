@@ -1,4 +1,4 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary", "core_library", "core_resource", "core_xunit_test")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_resource")
 
 filegroup(
     name = "core_common",
@@ -28,10 +28,7 @@ core_library(
     resources = [":xunit_core_resource"],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.filesystem.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
         "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
@@ -67,13 +64,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":xunit.core.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.collections.concurrent.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.filesystem.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.expressions.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.threading.thread.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
 
@@ -114,16 +105,7 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.collections.concurrent.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.filesystem.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.expressions.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.interopservices.runtimeinformation.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.text.regularexpressions.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.threading.thread.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.xml.xdocument.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
         "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
@@ -146,13 +128,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":xunit.runner.utility.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.collections.concurrent.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.filesystem.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.expressions.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.threading.thread.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
         "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
@@ -234,13 +210,7 @@ filegroup(
 #    ],
 #    visibility = ["//visibility:public"],
 #    deps = [
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.expressions.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.filesystem.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.collections.concurrent.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.threading.thread.dll",
+#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
 #        "@xunit_abstractions//:abstractions.xunit",
 #        ":xunit.core",
 #  ],
@@ -254,10 +224,7 @@ filegroup(
 #    ],
 #    visibility = ["//visibility:public"],
 #    deps = [
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.runtime.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.private.corelib.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.linq.dll",
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:system.io.filesystem.dll",
+#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
 #        "@xunit_abstractions//:abstractions.xunit",
 #        "@xunit_assert//:assert.xunit",
 #        ":xunit.core",
