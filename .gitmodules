@@ -1,7 +1,3 @@
-[submodule "ifluentinterface/ifluentinterface"]
-	path = ifluentinterface/ifluentinterface
-	url = https://github.com/kzu/IFluentInterface.git
-	branch = master
 [submodule "mono-cecil/cecil"]
 	path = mono-cecil/cecil
 	url = https://github.com/jbevain/cecil.git
