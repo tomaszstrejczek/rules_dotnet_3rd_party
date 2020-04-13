@@ -201,20 +201,20 @@ filegroup(
     ],
 )
 
-#core_library(
-#    name = "xunit.test.utility",
-#    srcs = [":test_utility_common"] + glob(["xunit/test/test.utility/**/*.cs"]),
-#    defines = [
-#        "NETSTANDARD2_0",
-#        "NETSTANDARD",
-#    ],
-#    visibility = ["//visibility:public"],
-#    deps = [
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-#        "@xunit_abstractions//:abstractions.xunit",
-#        ":xunit.core",
-#  ],
-#)
+# core_library(
+#     name = "xunit.test.utility.dll",
+#     srcs = [":test_utility_common"] + glob(["xunit/test/test.utility/**/*.cs"]),
+#     defines = [
+#         "NETSTANDARD2_0",
+#         "NETSTANDARD",
+#     ],
+#     visibility = ["//visibility:public"],
+#     deps = [
+#         ":xunit.core.dll",
+#         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+#         "@xunit_abstractions//:abstractions.xunit.dll",
+#     ],
+# )
 
 #core_xunit_test(
 #    name = "test.xunit.assert",

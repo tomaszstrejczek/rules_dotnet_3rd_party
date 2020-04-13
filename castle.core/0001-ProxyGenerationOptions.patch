@@ -1,0 +1,22 @@
+diff --git a/src/Castle.Core/DynamicProxy/ProxyGenerationOptions.cs b/src/Castle.Core/DynamicProxy/ProxyGenerationOptions.cs
+index 78918d34c..a268bd5e0 100644
+--- src/Castle.Core/DynamicProxy/ProxyGenerationOptions.cs
++++ src/Castle.Core/DynamicProxy/ProxyGenerationOptions.cs
+@@ -223,7 +223,7 @@ namespace Castle.DynamicProxy
+ 			{
+ 				return false;
+ 			}
+-			if (!CollectionExtensions.AreEquivalent(AdditionalAttributes, proxyGenerationOptions.AdditionalAttributes))
++			if (!Castle.Core.Internal.CollectionExtensions.AreEquivalent(AdditionalAttributes, proxyGenerationOptions.AdditionalAttributes))
+ 			{
+ 				return false;
+ 			}
+@@ -239,7 +239,7 @@ namespace Castle.DynamicProxy
+ 			result = 29*result + (Selector != null ? 1 : 0);
+ 			result = 29*result + MixinData.GetHashCode();
+ 			result = 29*result + (BaseTypeForInterfaceProxy != null ? BaseTypeForInterfaceProxy.GetHashCode() : 0);
+-			result = 29*result + CollectionExtensions.GetContentsHashCode(AdditionalAttributes);
++			result = 29*result + Castle.Core.Internal.CollectionExtensions.GetContentsHashCode(AdditionalAttributes);
+ 			return result;
+ 		}
+ 	}
