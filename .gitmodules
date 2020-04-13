@@ -12,9 +12,6 @@
 [submodule "newtonsoft.json/Newtonsoft.Json"]
 	path = newtonsoft.json/Newtonsoft.Json
 	url = https://github.com/JamesNK/Newtonsoft.Json.git
-[submodule "TypeNameFormatter/TypeNameFormatter"]
-	path = TypeNameFormatter/TypeNameFormatter
-	url = https://github.com/stakx/TypeNameFormatter.git
 [submodule "xunit/xunit"]
 	path = xunit/xunit
 	url = https://github.com/xunit/xunit.git

@@ -2,10 +2,10 @@ load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library")
 
 core_library(
     name = "TypeNameFormatter.dll",
-    srcs = glob(["TypeNameFormatter/src/TypeNameFormatter/**/*.cs"]),
+    srcs = glob(["src/TypeNameFormatter/**/*.cs"]),
     defines = [
     ],
-    keyfile = ":typenameformatter.snk",
+    keyfile = "@rules_dotnet_3rd_party//:TypeNameFormatter/typenameformatter.snk",
     visibility = ["//visibility:public"],
     deps = [
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
