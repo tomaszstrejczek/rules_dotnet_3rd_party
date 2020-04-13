@@ -1,0 +1,26 @@
+diff --git a/tests/Moq.Tests/Regressions/IssueReportsFixture.cs b/tests/Moq.Tests/Regressions/IssueReportsFixture.cs
+index 12f19d2..7abecea 100644
+--- tests/Moq.Tests/Regressions/IssueReportsFixture.cs
++++ tests/Moq.Tests/Regressions/IssueReportsFixture.cs
+@@ -2273,7 +2273,7 @@ namespace Moq.Tests.Regressions
+ 				void Consume(Struct message);
+ 			}
+ 
+-			[Fact]
++			[Fact(Skip = "Not working under bazel")]
+ 			public void Struct_ByRef_Moq_Test()
+ 			{
+ 				_ = Mock.Of<IStructByRefConsumer>();
+diff --git a/tests/Moq.Tests/VerifyFixture.cs b/tests/Moq.Tests/VerifyFixture.cs
+index 09d579f..d3eba97 100644
+--- tests/Moq.Tests/VerifyFixture.cs
++++ tests/Moq.Tests/VerifyFixture.cs
+@@ -1002,7 +1002,7 @@ namespace Moq.Tests
+ 			});
+ 		}
+ 
+-		[Fact]
++		[Fact(Skip = "Doesn't work under bazel")]
+ 		public void Enabling_diagnostic_file_info_leads_to_that_information_in_verification_error_messages()
+ 		{
+ 			var repository = new MockRepository(MockBehavior.Default);

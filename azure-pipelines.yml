@@ -47,3 +47,44 @@ jobs:
     - script: |
         bazel $(bazel_startup) build -s --spawn_strategy=standalone //:all.build 
       displayName: 'Build all'
+
+    - script: |
+        bazel $(bazel_startup) build -s --spawn_strategy=standalone //:all.test 
+      displayName: 'Build tests'
+
+    - script: |
+        bazel $(bazel_startup) test -s --spawn_strategy=standalone @moq4//:Moq.Tests.dll 
+      displayName: 'Run moq4 tests'
+
+    - powershell: |
+        $xslt = New-Object System.Xml.Xsl.XslCompiledTransform;
+        $template = Resolve-Path "tools/converttests/n3.xslt"
+        $xslt.Load($template);
+        function doProcess($file)
+        {
+          $result = [io.path]::GetDirectoryName($file) + "/" + [io.path]::GetFileNameWithoutExtension($file) + "-junit.xml" 
+          echo "Processing $file to $result"
+          [xml]$xml = Get-Content $file
+          $n = Select-Xml "//testsuites" $xml 
+          if ($n.count -gt 0) {
+            echo "junit"
+            copy-item $file $result
+          } else {
+            echo "Transforming"
+            $xslt.Transform($file, $result)
+          }        
+        }
+        gci -r bazel-out -filter "test*.xml" -exclude "*-junit.xml" | foreach { doProcess($_.FullName) }
+      displayName: 'Convert test files'
+
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
+        testResultsFiles: 'bazel-testlogs/**/test-junit.xml' 
+        testRunTitle: $(systemName)
+        buildPlatform: $(systemName)
+        #searchFolder: '$(System.DefaultWorkingDirectory)' # Optional
+        #mergeTestResults: false # Optional
+        #buildPlatform: # Optional
+        #buildConfiguration: # Optional
+        publishRunAttachments: true # Optional
