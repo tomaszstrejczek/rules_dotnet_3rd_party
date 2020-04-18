@@ -6,13 +6,14 @@ core_libraryset(
         ":NUnitTestAdapter.TestAdapter.dll",
         ":empty-assembly.dll",
         ":mock-assembly.dll",
-        "//vstest:vstest.console.exe",
+        "@vstest.16.5//:vstest.console.exe",
     ],
+    visibility = ["//visibility:public"],
 )
 
 core_library(
     name = "NUnitTestAdapter.TestAdapter.dll",
-    srcs = glob(["nunit3-vs-adapter/src/NUnitTestAdapter/**/*.cs"]),
+    srcs = glob(["src/NUnitTestAdapter/**/*.cs"]),
     defines = [
         "NETCOREAPP1_0",
         "SERIALIZATION",
@@ -20,18 +21,18 @@ core_library(
         "PLATFORM_DETECTION",
         "PARALLEL",
     ],
-    keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
+    keyfile = "src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "//nunit-console:engine.dll",
-        "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@nunit-console.3.11.1//:engine.dll",
+        "@vstest.16.5//:Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
 )
 
 core_library(
     name = "empty-assembly.dll",
-    srcs = glob(["nunit3-vs-adapter/src/empty-assembly/**/*.cs"]),
+    srcs = glob(["src/empty-assembly/**/*.cs"]),
     defines = [
         "NETCOREAPP1_0",
         "SERIALIZATION",
@@ -39,7 +40,7 @@ core_library(
         "PLATFORM_DETECTION",
         "PARALLEL",
     ],
-    keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
+    keyfile = "src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
         "//nunit:nunit.framework.dll",
@@ -49,7 +50,7 @@ core_library(
 
 core_library(
     name = "mock-assembly.dll",
-    srcs = glob(["nunit3-vs-adapter/src/mock-assembly/**/*.cs"]),
+    srcs = glob(["src/mock-assembly/**/*.cs"]),
     defines = [
         "NETCOREAPP1_0",
         "SERIALIZATION",
@@ -57,7 +58,7 @@ core_library(
         "PLATFORM_DETECTION",
         "PARALLEL",
     ],
-    keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
+    keyfile = "src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
         "//nunit:nunit.framework.dll",
@@ -67,7 +68,7 @@ core_library(
 
 core_xunit_test(
     name = "adapterexternaltests.dll",
-    srcs = glob(["nunit3-vs-adapter/src/NUnit3AdapterExternalTests/**/*.cs"]),
+    srcs = glob(["src/NUnit3AdapterExternalTests/**/*.cs"]),
     defines = [
         "NETCOREAPP1_0",
         "SERIALIZATION",
@@ -75,7 +76,7 @@ core_xunit_test(
         "PLATFORM_DETECTION",
         "PARALLEL",
     ],
-    keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
+    keyfile = "src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
         ":nunit3.vstest",
@@ -86,7 +87,7 @@ core_xunit_test(
 
 # # core_library(
 # #     name = "adaptertests",
-# #     srcs = glob(["nunit3-vs-adapter/src/NUnitTestAdapterTests/**/*.cs"]),
+# #     srcs = glob(["src/NUnitTestAdapterTests/**/*.cs"]),
 # #     visibility = ["//visibility:public"],
 # #     defines = [
 # #         "NETCOREAPP1_0",
@@ -100,7 +101,7 @@ core_xunit_test(
 # #         "//nunit:nunit.framework",
 # #         "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel",
 # #     ],
-# #     keyfile = ":nunit3-vs-adapter/src/NUnitAdapter.snk",
+# #     keyfile = "src/NUnitAdapter.snk",
 # # )
 
 core_xunit_test(

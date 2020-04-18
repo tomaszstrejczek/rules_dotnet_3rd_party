@@ -1,37 +1,3 @@
-[submodule "mono-cecil/cecil"]
-	path = mono-cecil/cecil
-	url = https://github.com/jbevain/cecil.git
-	branch = master
-[submodule "newtonsoft.json/Newtonsoft.Json"]
-	path = newtonsoft.json/Newtonsoft.Json
-	url = https://github.com/JamesNK/Newtonsoft.Json.git
-[submodule "xunit/xunit"]
-	path = xunit/xunit
-	url = https://github.com/xunit/xunit.git
-[submodule "vstest/vstest"]
-	path = vstest/vstest
-	url = https://github.com/microsoft/vstest.git
-[submodule "nuget.netstandard/nuget"]
-	path = nuget.netstandard/nuget
-	url = https://github.com/aelij/NuGet.Client.git
-[submodule "nuget.netstandard/Common"]
-	path = nuget.netstandard/Common
-	url = https://github.com/aspnet/Common.git
-[submodule "nuget.netstandard/FileSystem"]
-	path = nuget.netstandard/FileSystem
-	url = https://github.com/NuGet/FileSystem.git
-[submodule "nunit-console/nunit-console"]
-	path = nunit-console/nunit-console
-	url = https://github.com/tomaszstrejczek/nunit-console.git
-[submodule "nunit/nunit"]
-	path = nunit/nunit
-	url = https://github.com/tomaszstrejczek/nunit.git
-[submodule "nunit3-vs-adapter/nunit3-vs-adapter"]
-	path = nunit3-vs-adapter/nunit3-vs-adapter
-	url = https://github.com/tomaszstrejczek/nunit3-vs-adapter.git
-[submodule "testfx/testfx"]
-	path = testfx/testfx
-	url = https://github.com/tomaszstrejczek/testfx.git
 [submodule "vstest-junit-logger/vstest-junit-logger"]
 	path = vstest-junit-logger/vstest-junit-logger
 	url = https://github.com/tomaszstrejczek/vstest-junit-logger.git

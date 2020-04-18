@@ -556,4 +556,256 @@ def repositories_nugets():
             "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
         ],
     )
+    nuget_package(
+        name = "system.componentmodel.composition",
+        package = "system.componentmodel.composition",
+        version = "4.7.0",
+        sha256 = "8f5ad0e2eb72a2530ddc140c48d7f7046634d202f93e9d41bbfaf225991bec11",
+        core_lib = {
+            "netcoreapp2.0": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+            "netcoreapp2.1": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+            "netcoreapp3.0": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+            "netcoreapp3.1": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+        },
+        net_lib = {
+            "netstandard2.0": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+            "netstandard2.1": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+        },
+        mono_lib = "ref/netstandard2.0/System.ComponentModel.Composition.dll",
+        core_files = {
+            "netcoreapp2.0": [
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+            ],
+            "netcoreapp2.1": [
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+            ],
+            "netcoreapp3.0": [
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+            ],
+            "netcoreapp3.1": [
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+            ],
+        },
+        net_files = {
+            "netstandard2.0": [
+               "lib/netstandard2.0/System.ComponentModel.Composition.dll",
+               "lib/netstandard2.0/System.ComponentModel.Composition.xml",
+            ],
+            "netstandard2.1": [
+               "lib/netstandard2.0/System.ComponentModel.Composition.dll",
+               "lib/netstandard2.0/System.ComponentModel.Composition.xml",
+            ],
+        },
+        mono_files = [
+            "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+            "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+        ],
+    )
+    nuget_package(
+        name = "microsoft.web.xdt",
+        package = "microsoft.web.xdt",
+        version = "3.0.0",
+        sha256 = "161152cd56e0b6d602b6ba9470854537654a184cf52790c8f08cd107817371a1",
+        core_lib = {
+            "netcoreapp2.0": "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+            "netcoreapp2.1": "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+            "netcoreapp3.0": "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+            "netcoreapp3.1": "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+        },
+        net_lib = {
+            "net45": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net451": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net452": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net46": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net461": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net462": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net47": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net471": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net472": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "net48": "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "netstandard2.0": "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+            "netstandard2.1": "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+        },
+        mono_lib = "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+        core_files = {
+            "netcoreapp2.0": [
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "netcoreapp2.1": [
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "netcoreapp3.0": [
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "netcoreapp3.1": [
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+            ],
+        },
+        net_files = {
+            "net45": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net451": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net452": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net46": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net461": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net462": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net47": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net471": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net472": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "net48": [
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "netstandard2.0": [
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+            ],
+            "netstandard2.1": [
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+            ],
+        },
+        mono_files = [
+            "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+            "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+        ],
+    )
+    nuget_package(
+        name = "microsoft.dotnet.internalabstractions",
+        package = "microsoft.dotnet.internalabstractions",
+        version = "1.0.0",
+        sha256 = "1d7de23971fbe48d4bede3628426cc3430e9728b5f6697d051da9d45318ce856",
+        core_lib = {
+            "netcoreapp2.0": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "netcoreapp2.1": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "netcoreapp3.0": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "netcoreapp3.1": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+        },
+        net_lib = {
+            "net451": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "net452": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "net46": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "net461": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "net462": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "net47": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "net471": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "net472": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "net48": "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            "netstandard1.3": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "netstandard1.4": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "netstandard1.5": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "netstandard1.6": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "netstandard2.0": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "netstandard2.1": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+        },
+        mono_lib = "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+        mono_deps = [
+            "@io_bazel_rules_dotnet//dotnet/stdlib:system.appcontext.dll",
+            "@io_bazel_rules_dotnet//dotnet/stdlib:system.collections.dll",
+            "@io_bazel_rules_dotnet//dotnet/stdlib:system.io.dll",
+            "@io_bazel_rules_dotnet//dotnet/stdlib:system.io.filesystem.dll",
+            "@io_bazel_rules_dotnet//dotnet/stdlib:system.reflection.typeextensions.dll",
+            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.extensions.dll",
+            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.interopservices.dll",
+            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.interopservices.runtimeinformation.dll",
+        ],
+        core_files = {
+            "netcoreapp2.0": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netcoreapp2.1": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netcoreapp3.0": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netcoreapp3.1": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+        },
+        net_files = {
+            "net451": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "net452": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "net46": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "net461": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "net462": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "net47": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "net471": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "net472": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "net48": [
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netstandard1.3": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netstandard1.4": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netstandard1.5": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netstandard1.6": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netstandard2.0": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netstandard2.1": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+        },
+        mono_files = [
+            "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+        ],
+    )
     ### End of generated by the tool
