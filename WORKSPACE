@@ -4,8 +4,8 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
     name = "io_bazel_rules_dotnet",
-    branch = "3rd_party",
-    remote = "https://github.com/tomaszstrejczek/rules_dotnet.git",
+    branch = "master",
+    remote = "https://github.com/bazelbuild/rules_dotnet.git",
 )
 
 #local_repository(
