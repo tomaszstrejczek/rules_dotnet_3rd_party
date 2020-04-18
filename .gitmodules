@@ -1,3 +1,0 @@
-[submodule "vstest-junit-logger/vstest-junit-logger"]
-	path = vstest-junit-logger/vstest-junit-logger
-	url = https://github.com/tomaszstrejczek/vstest-junit-logger.git
