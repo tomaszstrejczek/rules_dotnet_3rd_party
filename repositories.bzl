@@ -63,7 +63,7 @@ def rules_dotnet_3rd_party_dependencies():
         name = "newtonsoft.json.12",
         build_file = "@rules_dotnet_3rd_party//newtonsoft.json:repo.bzl",
         sha256 = "731bdcd1f74c4eed84c27ea72df132453b560a6ebecc849b87b6f87f001bffd3",
-        strip_prefix = "newtonsoft.json-12.0.2",
+        strip_prefix = "Newtonsoft.Json-12.0.2",
         urls = ["https://github.com/JamesNK/Newtonsoft.Json/archive/12.0.2.tar.gz"],
     )
 

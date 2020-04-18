@@ -283,6 +283,7 @@ core_library(
         ":NuGet.Frameworks.dll",
         ":NuGet.ProjectModel.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@microsoft.extensions.primitives//:netcoreapp3.1_core",
     ],
 )
 
