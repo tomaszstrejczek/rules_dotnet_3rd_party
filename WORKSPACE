@@ -2,17 +2,17 @@ workspace(name = "rules_dotnet_3rd_party")
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
-# git_repository(
-#     name = "io_bazel_rules_dotnet",
-#     branch = "master",
-#     remote = "https://github.com/bazelbuild/rules_dotnet.git",
-# )
-
-local_repository(
+git_repository(
     name = "io_bazel_rules_dotnet",
-    path = "/home/tomek/rules_dotnet",
-    #path = "c:/rules_dotnet",
+    branch = "master",
+    remote = "https://github.com/bazelbuild/rules_dotnet.git",
 )
+
+# local_repository(
+#     name = "io_bazel_rules_dotnet",
+#     path = "/home/tomek/rules_dotnet",
+#     #path = "c:/rules_dotnet",
+# )
 
 load("@io_bazel_rules_dotnet//dotnet:deps.bzl", "dotnet_repositories")
 
