@@ -46,15 +46,16 @@ jobs:
       displayName: 'Show bazel version'
 
     - script: |
-        bazel $(bazel_startup) build -s --spawn_strategy=standalone //:all.build 
+        bazel $(bazel_startup) build --spawn_strategy=standalone //:all.build 
       displayName: 'Build all'
 
     - script: |
-        bazel $(bazel_startup) build -s --spawn_strategy=standalone //:all.test 
-      displayName: 'Build tests'
+        bazel $(bazel_startup) test --spawn_strategy=standalone @moq4//:Moq.Tests.dll 
+      continueOnError: true
+      displayName: 'Run moq4 tests'
 
     - script: |
-        bazel $(bazel_startup) test -s --spawn_strategy=standalone @moq4//:Moq.Tests.dll 
+        bazel $(bazel_startup) test -c dbg --spawn_strategy=standalone @nunit.3.12//:nunit.framework.tests.dll 
       continueOnError: true
       displayName: 'Run moq4 tests'
 

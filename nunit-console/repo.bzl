@@ -2,6 +2,15 @@ load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_stdlib")
 
 core_stdlib(name = "microsoft.dotnet.platformabstractions.dll")
 
+DEFINES = [
+    "NETSTANDARD2_0",
+    "NETSTANDARD",
+    "SERIALIZATION",
+    "ASYNC",
+    "PLATFORM_DETECTION",
+    "PARALLEL",
+]
+
 filegroup(
     name = "engine_api_common",
     srcs = [
@@ -13,13 +22,7 @@ filegroup(
 core_library(
     name = "engine.api.dll",
     srcs = glob(["src/NUnitEngine/nunit.engine.api/**/*.cs"]) + [":engine_api_common"],
-    defines = [
-        "NETSTANDARD1_6",
-        "SERIALIZATION",
-        "ASYNC",
-        "PLATFORM_DETECTION",
-        "PARALLEL",
-    ],
+    defines = DEFINES,
     keyfile = "src/nunit.snk",
     visibility = ["//visibility:public"],
     deps = [
@@ -39,14 +42,7 @@ filegroup(
 core_library(
     name = "engine.dll",
     srcs = glob(["src/NUnitEngine/nunit.engine/**/*.cs"]) + [":engine_common"],
-    defines = [
-        "NETSTANDARD1_6",
-        "NETSTANDARD",
-        "SERIALIZATION",
-        "ASYNC",
-        "PLATFORM_DETECTION",
-        "PARALLEL",
-    ],
+    defines = DEFINES,
     keyfile = "src/nunit.snk",
     visibility = ["//visibility:public"],
     deps = [
@@ -62,14 +58,7 @@ core_library(
 core_library(
     name = "engine.core.dll",
     srcs = glob(["src/NUnitEngine/nunit.engine.core/**/*.cs"]) + [":engine_common"],
-    defines = [
-        "NETSTANDARD1_6",
-        "NETSTANDARD",
-        "SERIALIZATION",
-        "ASYNC",
-        "PLATFORM_DETECTION",
-        "PARALLEL",
-    ],
+    defines = DEFINES,
     keyfile = "src/nunit.snk",
     visibility = ["//visibility:public"],
     deps = [
