@@ -50,7 +50,7 @@ jobs:
       displayName: 'Build all'
 
     - script: |
-        bazel $(bazel_startup) test --spawn_strategy=standalone @moq4//:Moq.Tests.dll 
+        bazel $(bazel_startup) test -c dbg --spawn_strategy=standalone @moq4//:Moq.Tests.dll 
       continueOnError: true
       displayName: 'Run moq4 tests'
 
