@@ -32,15 +32,11 @@ jobs:
 
     - script: |
         rm /usr/local/bin/bazel || true
-        brew list bazel &>/dev/null || brew install bazel 
+        brew list bazel && brew remove bazel
+        brew list bazel || brew install bazel 
       displayName: 'Install dependencies osx'
       condition: and(succeeded(), eq(variables['systemName'], 'mac'))
        
-    - script: |
-        choco install bazel mono
-      displayName: 'Install dependencies'
-      condition: and(succeeded(), eq(variables['systemName'], 'windows'))
-
     - script: |
         bazel version
       displayName: 'Show bazel version'
