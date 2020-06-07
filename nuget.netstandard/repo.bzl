@@ -1,6 +1,6 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_resx", "core_stdlib")
 
-core_stdlib(name = "system.security.cryptography.protecteddata.dll")
+core_stdlib(name = "system.security.cryptography.protecteddata.dll", version = "4.0.5.0")
 
 filegroup(
     name = "shared",

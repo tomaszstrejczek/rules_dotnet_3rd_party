@@ -1,6 +1,6 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_stdlib")
 
-core_stdlib(name = "microsoft.dotnet.platformabstractions.dll")
+core_stdlib(name = "microsoft.dotnet.platformabstractions.dll", version = "3.1.0")
 
 DEFINES = [
     "NETSTANDARD2_0",
