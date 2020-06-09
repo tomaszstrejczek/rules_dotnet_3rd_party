@@ -74,7 +74,7 @@ core_library(
     deps = [
         ":Microsoft.TestPlatform.CoreUtilities.dll",
         ":Microsoft.TestPlatform.PlatformAbstractions.dll",
-        "@nuget.frameworks//:netcoreapp3.1_core",
+        "@nuget.frameworks//:core",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
@@ -156,7 +156,7 @@ core_library(
         ":Microsoft.TestPlatform.CoreUtilities.dll",
         ":Microsoft.VisualStudio.TestPlatform.Common.dll",
         ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
-        "@newtonsoft.json//:netcoreapp3.1_core",
+        "@newtonsoft.json//:core",
     ],
 )
 
@@ -229,7 +229,7 @@ core_binary(
     visibility = ["//visibility:public"],
     deps = [
         #":Microsoft.TestPlatform.Extensions.TrxLogger.dll",
-        "@microsoft.extensions.filesystemglobbing//:netcoreapp3.1_core",
+        "@microsoft.extensions.filesystemglobbing//:core",
         ":Microsoft.TestPlatform.TestHostRuntimeProvider.dll",
         ":Microsoft.VisualStudio.TestPlatform.Client.dll",
         ":testhost.dll",
@@ -297,9 +297,9 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
-        "@newtonsoft.json//:netcoreapp3.1_core",
+        "@newtonsoft.json//:core",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-        "@microsoft.extensions.dependencymodel//:netcoreapp3.1_core",
+        "@microsoft.extensions.dependencymodel//:core",
     ],
 )
 

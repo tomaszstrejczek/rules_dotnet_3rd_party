@@ -27,7 +27,4 @@ dotnet_repositories_nugets()
 
 rules_dotnet_3rd_party_dependencies()
 
-core_register_sdk(
-    "v3.1.100",
-    name = "core_sdk",
-)
+core_register_sdk()

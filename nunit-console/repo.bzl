@@ -51,7 +51,7 @@ core_library(
         "@mono-cecil//:cecil.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
         ":engine.core.dll",
-        "@microsoft.dotnet.internalabstractions//:netcoreapp3.1_core",
+        "@microsoft.dotnet.internalabstractions//:core",
     ],
 )
 

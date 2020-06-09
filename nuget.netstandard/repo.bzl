@@ -158,7 +158,7 @@ core_library(
         ":NuGet.Configuration.dll",
         ":NuGet.Packaging.Core.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-        "@newtonsoft.json//:netcoreapp2.1_core",
+        "@newtonsoft.json//:core",
     ],
 )
 
@@ -283,7 +283,7 @@ core_library(
         ":NuGet.Frameworks.dll",
         ":NuGet.ProjectModel.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-        "@microsoft.extensions.primitives//:netcoreapp3.1_core",
+        "@microsoft.extensions.primitives//:core",
     ],
 )
 
@@ -306,7 +306,7 @@ core_library(
         ":NuGet.Commands.dll",
         ":NuGet.Resolver.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-        "@microsoft.web.xdt//:netcoreapp3.1_core",
-        "@system.componentmodel.composition//:netcoreapp3.1_core",
+        "@microsoft.web.xdt//:core",
+        "@system.componentmodel.composition//:core",
     ],
 )

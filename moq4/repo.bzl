@@ -38,8 +38,8 @@ core_xunit_test(
     visibility = ["//visibility:public"],
     deps = [
         ":Moq.dll",
-        "@xunit.assert//:netcoreapp2.0_core",
-        "@xunit.extensibility.core//:netcoreapp3.1_core",
-        "@xunit.extensibility.execution//:netcoreapp3.1_core",
+        "@xunit.assert//:core",
+        "@xunit.extensibility.core//:core",
+        "@xunit.extensibility.execution//:core",
     ],
 )
