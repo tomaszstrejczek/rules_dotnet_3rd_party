@@ -1,6 +1,4 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_stdlib")
-
-core_stdlib(name = "microsoft.dotnet.platformabstractions.dll", version = "3.1.0")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library")
 
 DEFINES = [
     "NETSTANDARD2_0",
@@ -47,7 +45,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":engine.api.dll",
-        ":microsoft.dotnet.platformabstractions.dll",
+        "@microsoft.dotnet.platformabstractions//:core",
         "@mono-cecil//:cecil.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
         ":engine.core.dll",
@@ -63,7 +61,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":engine.api.dll",
-        ":microsoft.dotnet.platformabstractions.dll",
+        "@microsoft.dotnet.platformabstractions//:core",
         "@mono-cecil//:cecil.dll",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],

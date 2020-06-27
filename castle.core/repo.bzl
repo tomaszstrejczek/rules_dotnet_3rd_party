@@ -29,6 +29,6 @@ core_library(
     deps = [
         #"@io_bazel_rules_dotnet//dotnet/stdlib.core:Microsoft.AspNetCore.App",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:p0_system.diagnostics.eventlog.dll",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:p1_system.diagnostics.eventlog.dll",
     ],
 )

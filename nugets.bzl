@@ -26,54 +26,54 @@ def repositories_nugets():
         mono_lib = "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
         core_files = {
             "netcoreapp2.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "netcoreapp2.1": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "netcoreapp3.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "netcoreapp3.1": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
         },
         net_files = {
             "net461": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "net462": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "net47": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "net471": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "net472": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "net48": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "netstandard2.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
             "netstandard2.1": [
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
             ],
         },
         mono_files = [
@@ -113,153 +113,129 @@ def repositories_nugets():
             "netstandard2.0": "lib/netstandard1.0/Newtonsoft.Json.dll",
             "netstandard2.1": "lib/netstandard1.0/Newtonsoft.Json.dll",
         },
-        mono_lib = "lib/netstandard1.0/Newtonsoft.Json.dll",
-        mono_deps = [
-            "@io_bazel_rules_dotnet//dotnet/stdlib:microsoft.csharp.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.collections.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.diagnostics.debug.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.dynamic.runtime.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.globalization.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.io.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.linq.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.linq.expressions.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.objectmodel.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.reflection.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.reflection.extensions.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.resources.resourcemanager.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.extensions.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.serialization.primitives.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.text.encoding.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.text.encoding.extensions.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.text.regularexpressions.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.threading.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.threading.tasks.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.xml.readerwriter.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.xml.xdocument.dll",
-        ],
+        mono_lib = "lib/net45/Newtonsoft.Json.dll",
         core_files = {
             "netcoreapp2.0": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netcoreapp2.1": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netcoreapp3.0": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netcoreapp3.1": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
         },
         net_files = {
             "net45": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net451": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net452": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net46": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net461": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net462": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net47": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net471": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net472": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "net48": [
-                "lib/net45/Newtonsoft.Json.dll",
-                "lib/net45/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/net45/Newtonsoft.Json.dll",
+               "lib/net45/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard1.0": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard1.1": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard1.2": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard1.3": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard1.4": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard1.5": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard1.6": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard2.0": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
             "netstandard2.1": [
-                "lib/netstandard1.0/Newtonsoft.Json.dll",
-                "lib/netstandard1.0/Newtonsoft.Json.xml",
-                "tools/install.ps1",
+               "lib/netstandard1.0/Newtonsoft.Json.dll",
+               "lib/netstandard1.0/Newtonsoft.Json.xml",
+               "tools/install.ps1",
             ],
         },
         mono_files = [
-            "lib/netstandard1.0/Newtonsoft.Json.dll",
-            "lib/netstandard1.0/Newtonsoft.Json.xml",
+            "lib/net45/Newtonsoft.Json.dll",
+            "lib/net45/Newtonsoft.Json.xml",
             "tools/install.ps1",
         ],
     )
@@ -268,13 +244,25 @@ def repositories_nugets():
         package = "system.runtime.interopservices.runtimeinformation",
         version = "4.0.0",
         sha256 = "e63e776a66fbe80dd23e21370749654f65cfc74e7cf82804ece5cbe1b2da953e",
-        core_lib = {
+        core_ref = {
             "netcoreapp2.0": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
             "netcoreapp2.1": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
             "netcoreapp3.0": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
             "netcoreapp3.1": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
         },
         net_lib = {
+            "net45": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net451": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net452": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net46": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net461": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net462": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net47": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net471": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net472": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+            "net48": "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+        },
+        net_ref = {
             "net45": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
             "net451": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
             "net452": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
@@ -294,100 +282,43 @@ def repositories_nugets():
             "netstandard2.0": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
             "netstandard2.1": "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
         },
-        mono_lib = "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
-        core_deps = {
-            "netcoreapp2.0": [
-                "@microsoft.netcore.platforms//:netcoreapp2.0_core",
-                "@runtime.native.system//:netcoreapp2.0_core",
-            ],
-            "netcoreapp2.1": [
-                "@microsoft.netcore.platforms//:netcoreapp2.1_core",
-                "@runtime.native.system//:netcoreapp2.1_core",
-            ],
-            "netcoreapp3.0": [
-                "@microsoft.netcore.platforms//:netcoreapp3.0_core",
-                "@runtime.native.system//:netcoreapp3.0_core",
-            ],
-            "netcoreapp3.1": [
-                "@microsoft.netcore.platforms//:netcoreapp3.1_core",
-                "@runtime.native.system//:netcoreapp3.1_core",
-            ],
-        },
-        net_deps = {
-            "netstandard1.1": [
-                "@microsoft.netcore.platforms//:netstandard1.1_net",
-                "@runtime.native.system//:netstandard1.1_net",
-            ],
-            "netstandard1.2": [
-                "@microsoft.netcore.platforms//:netstandard1.2_net",
-                "@runtime.native.system//:netstandard1.2_net",
-            ],
-            "netstandard1.3": [
-                "@microsoft.netcore.platforms//:netstandard1.3_net",
-                "@runtime.native.system//:netstandard1.3_net",
-            ],
-            "netstandard1.4": [
-                "@microsoft.netcore.platforms//:netstandard1.4_net",
-                "@runtime.native.system//:netstandard1.4_net",
-            ],
-            "netstandard1.5": [
-                "@microsoft.netcore.platforms//:netstandard1.5_net",
-                "@runtime.native.system//:netstandard1.5_net",
-            ],
-            "netstandard1.6": [
-                "@microsoft.netcore.platforms//:netstandard1.6_net",
-                "@runtime.native.system//:netstandard1.6_net",
-            ],
-            "netstandard2.0": [
-                "@microsoft.netcore.platforms//:netstandard2.0_net",
-                "@runtime.native.system//:netstandard2.0_net",
-            ],
-            "netstandard2.1": [
-                "@microsoft.netcore.platforms//:netstandard2.1_net",
-                "@runtime.native.system//:netstandard2.1_net",
-            ],
-        },
-        mono_deps = [
-            "@microsoft.netcore.platforms//:mono",
-            "@runtime.native.system//:mono",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.reflection.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.resources.resourcemanager.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.interopservices.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.threading.dll",
-        ],
+        mono_lib = "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+        mono_ref = "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll",
         net_files = {
             "net45": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net451": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net452": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net46": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net461": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net462": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net47": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net471": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net472": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
             "net48": [
-                "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+               "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
             ],
         },
+        mono_files = [
+            "lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
+        ],
     )
     nuget_package(
         name = "microsoft.extensions.dependencymodel",
@@ -417,143 +348,148 @@ def repositories_nugets():
             "netstandard2.0": "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
             "netstandard2.1": "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
         },
-        mono_lib = "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+        mono_lib = "lib/net451/Microsoft.Extensions.DependencyModel.dll",
         net_deps = {
             "net451": [
-                "@newtonsoft.json//:net451_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net451_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net451_net",
+               "@system.runtime.interopservices.runtimeinformation//:net451_net",
             ],
             "net452": [
-                "@newtonsoft.json//:net452_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net452_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net452_net",
+               "@system.runtime.interopservices.runtimeinformation//:net452_net",
             ],
             "net46": [
-                "@newtonsoft.json//:net46_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net46_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net46_net",
+               "@system.runtime.interopservices.runtimeinformation//:net46_net",
             ],
             "net461": [
-                "@newtonsoft.json//:net461_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net461_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net461_net",
+               "@system.runtime.interopservices.runtimeinformation//:net461_net",
             ],
             "net462": [
-                "@newtonsoft.json//:net462_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net462_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net462_net",
+               "@system.runtime.interopservices.runtimeinformation//:net462_net",
             ],
             "net47": [
-                "@newtonsoft.json//:net47_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net47_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net47_net",
+               "@system.runtime.interopservices.runtimeinformation//:net47_net",
             ],
             "net471": [
-                "@newtonsoft.json//:net471_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net471_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net471_net",
+               "@system.runtime.interopservices.runtimeinformation//:net471_net",
             ],
             "net472": [
-                "@newtonsoft.json//:net472_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net472_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net472_net",
+               "@system.runtime.interopservices.runtimeinformation//:net472_net",
             ],
             "net48": [
-                "@newtonsoft.json//:net48_net",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net48_system.runtime.interopservices.runtimeinformation.dll",
+               "@newtonsoft.json//:net48_net",
+               "@system.runtime.interopservices.runtimeinformation//:net48_net",
             ],
             "netstandard1.3": [
-                "@newtonsoft.json//:netstandard1.3_net",
+               "@newtonsoft.json//:netstandard1.3_net",
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.3_net",
             ],
             "netstandard1.4": [
-                "@newtonsoft.json//:netstandard1.4_net",
+               "@newtonsoft.json//:netstandard1.4_net",
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.4_net",
             ],
             "netstandard1.5": [
-                "@newtonsoft.json//:netstandard1.5_net",
+               "@newtonsoft.json//:netstandard1.5_net",
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.5_net",
             ],
             "netstandard1.6": [
-                "@newtonsoft.json//:netstandard1.6_net",
+               "@newtonsoft.json//:netstandard1.6_net",
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.6_net",
             ],
         },
         mono_deps = [
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.text.json.dll",
+            "@newtonsoft.json//:mono",
+            "@system.runtime.interopservices.runtimeinformation//:mono",
         ],
         core_files = {
             "netcoreapp2.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netcoreapp2.1": [
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netcoreapp3.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netcoreapp3.1": [
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
             ],
         },
         net_files = {
             "net451": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "net452": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "net46": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "net461": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "net462": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "net47": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "net471": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "net472": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "net48": [
-                "lib/net451/Microsoft.Extensions.DependencyModel.dll",
-                "lib/net451/Microsoft.Extensions.DependencyModel.xml",
+               "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+               "lib/net451/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netstandard1.3": [
-                "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netstandard1.4": [
-                "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netstandard1.5": [
-                "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard1.3/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netstandard1.6": [
-                "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netstandard2.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
             ],
             "netstandard2.1": [
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
             ],
         },
         mono_files = [
-            "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
-            "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+            "lib/net451/Microsoft.Extensions.DependencyModel.dll",
+            "lib/net451/Microsoft.Extensions.DependencyModel.xml",
         ],
     )
     nuget_package(
@@ -577,88 +513,66 @@ def repositories_nugets():
             "netstandard2.0": "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
             "netstandard2.1": "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         },
-        mono_lib = "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
-        net_deps = {
-            "net461": [
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net461_system.memory.dll",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net461_system.runtime.compilerservices.unsafe.dll",
-            ],
-            "net462": [
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net462_system.memory.dll",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net462_system.runtime.compilerservices.unsafe.dll",
-            ],
-            "net47": [
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net47_system.memory.dll",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net47_system.runtime.compilerservices.unsafe.dll",
-            ],
-            "net471": [
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net471_system.memory.dll",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net471_system.runtime.compilerservices.unsafe.dll",
-            ],
-            "net472": [
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net472_system.memory.dll",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net472_system.runtime.compilerservices.unsafe.dll",
-            ],
-            "net48": [
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net48_system.memory.dll",
-                "@io_bazel_rules_dotnet//dotnet/stdlib.net:net48_system.runtime.compilerservices.unsafe.dll",
-            ],
-        },
+        mono_lib = "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        mono_deps = [
+            "@system.memory//:mono",
+            "@system.runtime.compilerservices.unsafe//:mono",
+        ],
         core_files = {
             "netcoreapp2.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "netcoreapp2.1": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "netcoreapp3.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "netcoreapp3.1": [
-                "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
-                "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
+               "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
+               "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
             ],
         },
         net_files = {
             "net461": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "net462": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "net47": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "net471": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "net472": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "net48": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "netstandard2.0": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
             "netstandard2.1": [
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
-                "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+               "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
             ],
         },
         mono_files = [
-            "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
-            "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
+            "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+            "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
         ],
     )
     nuget_package(
@@ -667,48 +581,53 @@ def repositories_nugets():
         version = "4.7.0",
         sha256 = "8f5ad0e2eb72a2530ddc140c48d7f7046634d202f93e9d41bbfaf225991bec11",
         core_lib = {
+            "netcoreapp2.0": "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+            "netcoreapp2.1": "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+            "netcoreapp3.0": "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+            "netcoreapp3.1": "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+        },
+        core_ref = {
             "netcoreapp2.0": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
             "netcoreapp2.1": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
             "netcoreapp3.0": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
             "netcoreapp3.1": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
         },
         net_lib = {
+            "netstandard2.0": "lib/netstandard2.0/System.ComponentModel.Composition.dll",
+            "netstandard2.1": "lib/netstandard2.0/System.ComponentModel.Composition.dll",
+        },
+        net_ref = {
             "netstandard2.0": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
             "netstandard2.1": "ref/netstandard2.0/System.ComponentModel.Composition.dll",
         },
-        mono_lib = "ref/netstandard2.0/System.ComponentModel.Composition.dll",
         core_files = {
             "netcoreapp2.0": [
-                "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
-                "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
             ],
             "netcoreapp2.1": [
-                "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
-                "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
             ],
             "netcoreapp3.0": [
-                "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
-                "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
             ],
             "netcoreapp3.1": [
-                "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
-                "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
+               "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
             ],
         },
         net_files = {
             "netstandard2.0": [
-                "lib/netstandard2.0/System.ComponentModel.Composition.dll",
-                "lib/netstandard2.0/System.ComponentModel.Composition.xml",
+               "lib/netstandard2.0/System.ComponentModel.Composition.dll",
+               "lib/netstandard2.0/System.ComponentModel.Composition.xml",
             ],
             "netstandard2.1": [
-                "lib/netstandard2.0/System.ComponentModel.Composition.dll",
-                "lib/netstandard2.0/System.ComponentModel.Composition.xml",
+               "lib/netstandard2.0/System.ComponentModel.Composition.dll",
+               "lib/netstandard2.0/System.ComponentModel.Composition.xml",
             ],
         },
-        mono_files = [
-            "lib/netcoreapp2.0/System.ComponentModel.Composition.dll",
-            "lib/netcoreapp2.0/System.ComponentModel.Composition.xml",
-        ],
     )
     nuget_package(
         name = "microsoft.web.xdt",
@@ -735,78 +654,78 @@ def repositories_nugets():
             "netstandard2.0": "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
             "netstandard2.1": "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
         },
-        mono_lib = "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+        mono_lib = "lib/net40/Microsoft.Web.XmlTransform.dll",
         core_files = {
             "netcoreapp2.0": [
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
             ],
             "netcoreapp2.1": [
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
             ],
             "netcoreapp3.0": [
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
             ],
             "netcoreapp3.1": [
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
             ],
         },
         net_files = {
             "net45": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net451": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net452": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net46": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net461": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net462": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net47": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net471": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net472": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "net48": [
-                "lib/net40/Microsoft.Web.XmlTransform.dll",
-                "lib/net40/Microsoft.Web.XmlTransform.pdb",
+               "lib/net40/Microsoft.Web.XmlTransform.dll",
+               "lib/net40/Microsoft.Web.XmlTransform.pdb",
             ],
             "netstandard2.0": [
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
             ],
             "netstandard2.1": [
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
-                "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
+               "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
             ],
         },
         mono_files = [
-            "lib/netstandard2.0/Microsoft.Web.XmlTransform.dll",
-            "lib/netstandard2.0/Microsoft.Web.XmlTransform.pdb",
+            "lib/net40/Microsoft.Web.XmlTransform.dll",
+            "lib/net40/Microsoft.Web.XmlTransform.pdb",
         ],
     )
     nuget_package(
@@ -837,80 +756,379 @@ def repositories_nugets():
             "netstandard2.0": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
             "netstandard2.1": "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
         },
-        mono_lib = "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
-        mono_deps = [
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.appcontext.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.collections.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.io.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.io.filesystem.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.reflection.typeextensions.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.extensions.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.interopservices.dll",
-            "@io_bazel_rules_dotnet//dotnet/stdlib:system.runtime.interopservices.runtimeinformation.dll",
-        ],
-        core_files = {
+        mono_lib = "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+        core_deps = {
             "netcoreapp2.0": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "@system.runtime.interopservices.runtimeinformation//:netcoreapp2.0_core",
             ],
             "netcoreapp2.1": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "@system.runtime.interopservices.runtimeinformation//:netcoreapp2.1_core",
             ],
             "netcoreapp3.0": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "@system.runtime.interopservices.runtimeinformation//:netcoreapp3.0_core",
             ],
             "netcoreapp3.1": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "@system.runtime.interopservices.runtimeinformation//:netcoreapp3.1_core",
+            ],
+        },
+        net_deps = {
+            "netstandard1.3": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.3_net",
+            ],
+            "netstandard1.4": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.4_net",
+            ],
+            "netstandard1.5": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.5_net",
+            ],
+            "netstandard1.6": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.6_net",
+            ],
+            "netstandard2.0": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard2.0_net",
+            ],
+            "netstandard2.1": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard2.1_net",
+            ],
+        },
+        core_files = {
+            "netcoreapp2.0": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netcoreapp2.1": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netcoreapp3.0": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            ],
+            "netcoreapp3.1": [
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
             ],
         },
         net_files = {
             "net451": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "net452": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "net46": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "net461": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "net462": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "net47": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "net471": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "net472": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "net48": [
-                "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "netstandard1.3": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "netstandard1.4": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "netstandard1.5": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "netstandard1.6": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "netstandard2.0": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
             ],
             "netstandard2.1": [
-                "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
             ],
         },
         mono_files = [
-            "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+            "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+        ],
+    )
+    nuget_package(
+        name = "microsoft.dotnet.platformabstractions",
+        package = "microsoft.dotnet.platformabstractions",
+        version = "3.1.3",
+        sha256 = "5f9cdf209694bfe719b7c6fbc130c47743f2fd98cc8c81901a2667311137414d",
+        core_lib = {
+            "netcoreapp2.0": "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netcoreapp2.1": "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netcoreapp3.0": "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netcoreapp3.1": "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+        },
+        net_lib = {
+            "net45": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net451": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net452": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net46": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net461": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net462": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net47": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net471": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net472": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "net48": "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netstandard1.3": "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netstandard1.4": "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netstandard1.5": "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netstandard1.6": "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netstandard2.0": "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+            "netstandard2.1": "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+        },
+        mono_lib = "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+        net_deps = {
+            "net45": [
+               "@system.runtime.interopservices.runtimeinformation//:net45_net",
+            ],
+            "net451": [
+               "@system.runtime.interopservices.runtimeinformation//:net451_net",
+            ],
+            "net452": [
+               "@system.runtime.interopservices.runtimeinformation//:net452_net",
+            ],
+            "net46": [
+               "@system.runtime.interopservices.runtimeinformation//:net46_net",
+            ],
+            "net461": [
+               "@system.runtime.interopservices.runtimeinformation//:net461_net",
+            ],
+            "net462": [
+               "@system.runtime.interopservices.runtimeinformation//:net462_net",
+            ],
+            "net47": [
+               "@system.runtime.interopservices.runtimeinformation//:net47_net",
+            ],
+            "net471": [
+               "@system.runtime.interopservices.runtimeinformation//:net471_net",
+            ],
+            "net472": [
+               "@system.runtime.interopservices.runtimeinformation//:net472_net",
+            ],
+            "net48": [
+               "@system.runtime.interopservices.runtimeinformation//:net48_net",
+            ],
+            "netstandard1.3": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.3_net",
+            ],
+            "netstandard1.4": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.4_net",
+            ],
+            "netstandard1.5": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.5_net",
+            ],
+            "netstandard1.6": [
+               "@system.runtime.interopservices.runtimeinformation//:netstandard1.6_net",
+            ],
+        },
+        mono_deps = [
+            "@system.runtime.interopservices.runtimeinformation//:mono",
+        ],
+        core_files = {
+            "netcoreapp2.0": [
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netcoreapp2.1": [
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netcoreapp3.0": [
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netcoreapp3.1": [
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+        },
+        net_files = {
+            "net45": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net451": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net452": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net46": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net461": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net462": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net47": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net471": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net472": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "net48": [
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netstandard1.3": [
+               "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netstandard1.4": [
+               "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netstandard1.5": [
+               "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netstandard1.6": [
+               "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netstandard2.0": [
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+            "netstandard2.1": [
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.dll",
+               "lib/netstandard2.0/Microsoft.DotNet.PlatformAbstractions.xml",
+            ],
+        },
+        mono_files = [
+            "lib/net45/Microsoft.DotNet.PlatformAbstractions.dll",
+            "lib/net45/Microsoft.DotNet.PlatformAbstractions.xml",
+        ],
+    )
+    nuget_package(
+        name = "system.security.cryptography.protecteddata",
+        package = "system.security.cryptography.protecteddata",
+        version = "4.5.0",
+        sha256 = "67e5f5676944acb2fb627b768c5b3392eebf220ae780edd5d5b49f6530621487",
+        core_lib = {
+            "netcoreapp2.0": "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            "netcoreapp2.1": "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            "netcoreapp3.0": "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            "netcoreapp3.1": "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        },
+        core_ref = {
+            "netcoreapp2.0": "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            "netcoreapp2.1": "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            "netcoreapp3.0": "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            "netcoreapp3.1": "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        },
+        net_lib = {
+            "net46": "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+            "net461": "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net462": "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net47": "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net471": "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net472": "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net48": "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard1.3": "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard1.4": "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard1.5": "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard1.6": "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard2.0": "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard2.1": "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        },
+        net_ref = {
+            "net46": "ref/net46/System.Security.Cryptography.ProtectedData.dll",
+            "net461": "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net462": "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net47": "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net471": "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net472": "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+            "net48": "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard1.3": "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard1.4": "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard1.5": "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard1.6": "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard2.0": "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            "netstandard2.1": "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        },
+        mono_lib = "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        mono_ref = "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+        core_files = {
+            "netcoreapp2.0": [
+               "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netcoreapp2.1": [
+               "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netcoreapp3.0": [
+               "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netcoreapp3.1": [
+               "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            ],
+        },
+        net_files = {
+            "net46": [
+               "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "net461": [
+               "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "net462": [
+               "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "net47": [
+               "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "net471": [
+               "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "net472": [
+               "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "net48": [
+               "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netstandard1.3": [
+               "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netstandard1.4": [
+               "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netstandard1.5": [
+               "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netstandard1.6": [
+               "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netstandard2.0": [
+               "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            ],
+            "netstandard2.1": [
+               "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+            ],
+        },
+        mono_files = [
+            "lib/net461/System.Security.Cryptography.ProtectedData.dll",
         ],
     )
     ### End of generated by the tool
+    return

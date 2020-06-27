@@ -1,6 +1,4 @@
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_resx", "core_stdlib")
-
-core_stdlib(name = "system.security.cryptography.protecteddata.dll", version = "4.0.5.0")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library", "core_resx")
 
 filegroup(
     name = "shared",
@@ -66,7 +64,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":NuGet.Common.dll",
-        ":system.security.cryptography.protecteddata.dll",
+        "@system.security.cryptography.protecteddata//:core",
         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
     ],
 )
