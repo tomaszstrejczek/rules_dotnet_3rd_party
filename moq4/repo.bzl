@@ -20,7 +20,7 @@ core_library(
         "@//ifluentinterface:IFluentInterface.dll",
         "@TypeNameFormatter//:TypeNameFormatter.dll",
         "@castle.core//:Castle.Core.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -38,8 +38,8 @@ core_xunit_test(
     visibility = ["//visibility:public"],
     deps = [
         ":Moq.dll",
-        "@xunit.assert//:core",
-        "@xunit.extensibility.core//:core",
-        "@xunit.extensibility.execution//:core",
+        "@xunit.assert//:lib",
+        "@xunit.extensibility.core//:lib",
+        "@xunit.extensibility.execution//:lib",
     ],
 )

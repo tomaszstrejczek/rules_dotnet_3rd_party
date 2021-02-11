@@ -24,7 +24,7 @@ core_library(
     keyfile = "src/nunit.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -45,11 +45,11 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":engine.api.dll",
-        "@microsoft.dotnet.platformabstractions//:core",
+        "@microsoft.dotnet.platformabstractions//:lib",
         "@mono-cecil//:cecil.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
         ":engine.core.dll",
-        "@microsoft.dotnet.internalabstractions//:core",
+        "@microsoft.dotnet.internalabstractions//:lib",
     ],
 )
 
@@ -61,8 +61,8 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":engine.api.dll",
-        "@microsoft.dotnet.platformabstractions//:core",
+        "@microsoft.dotnet.platformabstractions//:lib",
         "@mono-cecil//:cecil.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )

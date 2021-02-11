@@ -21,7 +21,7 @@ core_library(
     resources = [":nuget_frameworks_resource"],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -42,7 +42,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":NuGet.Frameworks.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -64,8 +64,8 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":NuGet.Common.dll",
-        "@system.security.cryptography.protecteddata//:core",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@system.security.cryptography.protecteddata//:lib",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -85,7 +85,7 @@ core_library(
     resources = [":nuget_versioning_resource"],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -98,7 +98,7 @@ core_library(
     keyfile = "@rules_dotnet_3rd_party//nuget.netstandard:nuget.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -121,7 +121,7 @@ core_library(
         ":NuGet.Common.dll",
         ":NuGet.Frameworks.dll",
         ":NuGet.Versioning.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -155,8 +155,8 @@ core_library(
         ":NuGet.Common.dll",
         ":NuGet.Configuration.dll",
         ":NuGet.Packaging.Core.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-        "@newtonsoft.json//:core",
+        "@core_sdk_stdlib//:libraryset",
+        "@newtonsoft.json//:lib",
     ],
 )
 
@@ -280,8 +280,8 @@ core_library(
         ":NuGet.DependencyResolver.Core.dll",
         ":NuGet.Frameworks.dll",
         ":NuGet.ProjectModel.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-        "@microsoft.extensions.primitives//:core",
+        "@core_sdk_stdlib//:libraryset",
+        "@microsoft.extensions.primitives//:lib",
     ],
 )
 
@@ -303,8 +303,8 @@ core_library(
     deps = [
         ":NuGet.Commands.dll",
         ":NuGet.Resolver.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-        "@microsoft.web.xdt//:core",
-        "@system.componentmodel.composition//:core",
+        "@core_sdk_stdlib//:libraryset",
+        "@microsoft.web.xdt//:lib",
+        "@system.componentmodel.composition//:lib",
     ],
 )

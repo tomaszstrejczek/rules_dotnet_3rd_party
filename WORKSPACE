@@ -1,33 +1,29 @@
 workspace(name = "rules_dotnet_3rd_party")
 
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+#git_repository(
+#    name = "io_bazel_rules_dotnet",
+#    branch = "master",
+#    remote = "https://github.com/bazelbuild/rules_dotnet.git",
+#)
 
-git_repository(
+local_repository(
     name = "io_bazel_rules_dotnet",
-    branch = "master",
-    remote = "https://github.com/bazelbuild/rules_dotnet.git",
+    #path = "/home/tomek/rules_dotnet",
+    path = "d:/rules_dotnet",
 )
-
-# local_repository(
-#     name = "io_bazel_rules_dotnet",
-#     path = "/home/tomek/rules_dotnet",
-#     #path = "c:/rules_dotnet",
-# )
 
 load("@io_bazel_rules_dotnet//dotnet:deps.bzl", "dotnet_repositories")
 
 dotnet_repositories()
 
 load("@rules_dotnet_3rd_party//:repositories.bzl", "rules_dotnet_3rd_party_dependencies")
-load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_register_sdk", "dotnet_register_toolchains", "dotnet_repositories_nugets")
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "dotnet_register_toolchains", "dotnet_repositories_nugets")
 
 dotnet_register_toolchains()
 
 dotnet_repositories_nugets()
 
 rules_dotnet_3rd_party_dependencies()
-
-core_register_sdk()
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 

@@ -28,7 +28,7 @@ core_library(
     resources = [":xunit_core_resource"],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
         "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
@@ -64,7 +64,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":xunit.core.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -105,7 +105,7 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
         "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
@@ -128,7 +128,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         ":xunit.runner.utility.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
         "@xunit_abstractions//:abstractions.xunit.dll",
     ],
 )
@@ -211,7 +211,7 @@ filegroup(
 #     visibility = ["//visibility:public"],
 #     deps = [
 #         ":xunit.core.dll",
-#         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+#         "@core_sdk_stdlib//:libraryset",
 #         "@xunit_abstractions//:abstractions.xunit.dll",
 #     ],
 # )
@@ -224,7 +224,7 @@ filegroup(
 #    ],
 #    visibility = ["//visibility:public"],
 #    deps = [
-#        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+#        "@core_sdk_stdlib//:libraryset",
 #        "@xunit_abstractions//:abstractions.xunit",
 #        "@xunit_assert//:assert.xunit",
 #        ":xunit.core",

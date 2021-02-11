@@ -24,7 +24,7 @@ core_library(
     keyfile = "src/NUnitAdapter.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
         "@nunit-console.3.11.1//:engine.dll",
         "@vstest.16.5//:Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
@@ -44,7 +44,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         "//nunit:nunit.framework.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -62,7 +62,7 @@ core_library(
     visibility = ["//visibility:public"],
     deps = [
         "//nunit:nunit.framework.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -81,7 +81,7 @@ core_xunit_test(
     deps = [
         ":nunit3.vstest",
         "//nunit:nunit.framework.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )
 
@@ -97,7 +97,7 @@ core_xunit_test(
 # #         "PARALLEL",
 # #     ],
 # #     deps = [
-# #        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+# #        "@core_sdk_stdlib//:libraryset",
 # #         "//nunit:nunit.framework",
 # #         "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel",
 # #     ],
@@ -118,6 +118,6 @@ core_xunit_test(
     deps = [
         ":nunit3.vstest",
         "//nunit:nunit.framework.dll",
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )

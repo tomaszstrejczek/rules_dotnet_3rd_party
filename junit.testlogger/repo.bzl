@@ -14,7 +14,7 @@ core_library(
     srcs = glob(["src/JUnit.Xml.TestLogger/*.cs"]),
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
         "@vstest.16.5//:Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
 )
@@ -29,7 +29,7 @@ core_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
         "@vstest.16.5//:Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
     ],
 )

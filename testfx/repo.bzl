@@ -20,7 +20,7 @@
 #     visibility = ["//visibility:public"],
 #     deps = [
 #         ":Extension.Core.dll",
-#         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+#         "@core_sdk_stdlib//:libraryset",
 #     ],
 # )
 
@@ -32,7 +32,7 @@
 #     keyfile = "@rules_dotnet_3rd_party//testfx:testfx.snk",
 #     visibility = ["//visibility:public"],
 #     deps = [
-#         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+#         "@core_sdk_stdlib//:libraryset",
 #     ],
 # )
 
@@ -47,7 +47,7 @@
 #         ":Extension.Core.dll",
 #         ":MSTest.Core.dll",
 #         "//vstest:Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
-#         "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+#         "@core_sdk_stdlib//:libraryset",
 #     ],
 # )
 

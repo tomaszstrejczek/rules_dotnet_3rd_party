@@ -8,6 +8,6 @@ core_library(
     keyfile = "@rules_dotnet_3rd_party//:TypeNameFormatter/typenameformatter.snk",
     visibility = ["//visibility:public"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )

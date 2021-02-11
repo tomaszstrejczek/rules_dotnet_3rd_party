@@ -63,6 +63,6 @@ core_library(
     visibility = ["//visibility:public"],
     nowarn = ["CS8632", "CS0436"],
     deps = [
-        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "@core_sdk_stdlib//:libraryset",
     ],
 )

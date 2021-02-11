@@ -2,21 +2,25 @@ jobs:
 - job: BuildAndTest  
   strategy:
     matrix:
-      linux:
+      linux_amd64_3.1.100:
         poolName: 'Azure Pipelines'
         vmImage: 'ubuntu-latest'       
         systemName: 'linux'
         bazel_startup: '--host_jvm_args=-Xmx500m --host_jvm_args=-Xms500m'
-      windows:
+        platform: 'linux_amd64_3.1.100'
+      windows_amd64_3.1.100:
         poolName: 'Azure Pipelines'
         vmImage: 'windows-2019'
         systemName: 'windows'
         bazel_startup: '--output_user_root=c:\tmp --host_jvm_args=-Xmx500m --host_jvm_args=-Xms500m'
-      mac:
+        platform: 'windows_amd64_3.1.100'
+      darwin_amd64_3.1.100:
         poolName: 'Azure Pipelines'
         vmImage: 'macOS-10.15'
         systemName: 'mac'
         bazel_startup: '--host_jvm_args=-Xmx500m --host_jvm_args=-Xms500m'
+        platform: 'darwin_amd64_3.1.100'
+
   pool:
     name: $(poolName)
     vmImage: $(vmImage)
@@ -42,16 +46,16 @@ jobs:
       displayName: 'Show bazel version'
 
     - script: |
-        bazel $(bazel_startup) build --spawn_strategy=standalone //:all.build 
+        bazel $(bazel_startup) build --host_platform @io_bazel_rules_dotnet//dotnet/toolchain:$(platform) --platforms @io_bazel_rules_dotnet//dotnet/toolchain:$(platform) //:all.build 
       displayName: 'Build all'
 
     - script: |
-        bazel $(bazel_startup) test -c dbg --spawn_strategy=standalone @moq4//:Moq.Tests.dll 
+        bazel $(bazel_startup) test -c dbg --host_platform @io_bazel_rules_dotnet//dotnet/toolchain:$(platform) --platforms @io_bazel_rules_dotnet//dotnet/toolchain:$(platform) @moq4//:Moq.Tests.dll 
       continueOnError: true
       displayName: 'Run moq4 tests'
 
     - script: |
-        bazel $(bazel_startup) test -c dbg --spawn_strategy=standalone @nunit.3.12//:nunit.framework.tests.dll 
+        bazel $(bazel_startup) test -c dbg --host_platform @io_bazel_rules_dotnet//dotnet/toolchain:$(platform) --platforms @io_bazel_rules_dotnet//dotnet/toolchain:$(platform) @nunit.3.12//:nunit.framework.tests.dll 
       continueOnError: true
       displayName: 'Run moq4 tests'
 
